@@ -236,25 +236,34 @@ touch src/pages/about.astro
 
 ## Deployment
 
-### Cloudflare Pages
+### Cloudflare Pages (via Workers + Static Assets)
 
-**Build Configuration:**
-- **Framework preset:** Astro
-- **Build command:** `npm run build`
-- **Build output directory:** `dist`
-- **Node version:** 20
-- **Environment variables:** None required
+The site uses Cloudflare's modern Workers with Static Assets approach, configured via `wrangler.jsonc`:
+
+```jsonc
+{
+  "name": "persist-mn",
+  "compatibility_date": "2026-01-24",
+  "assets": {
+    "directory": "./dist"
+  }
+}
+```
 
 **Deployment Workflow:**
 1. Push code to GitHub
-2. Connect repository to Cloudflare Pages
-3. Configure build settings above
+2. Connect repository to Cloudflare Pages dashboard
+3. Cloudflare automatically detects `wrangler.jsonc` and uses:
+   - **Build command:** `npm run build`
+   - **Output directory:** `./dist` (from wrangler.jsonc)
 4. Automatic deployments on every push to `main`
 
 **Custom Domain (Optional):**
 1. Add domain in Cloudflare Pages dashboard
 2. Update `site` in `astro.config.mjs`
 3. Configure DNS records
+
+**Note:** Cloudflare Pages now runs on Workers infrastructure with static assets. The `wrangler.jsonc` file tells Cloudflare where to find your built files.
 
 ### Build Output
 

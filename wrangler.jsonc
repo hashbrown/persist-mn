@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "persist-mn",
+  "compatibility_date": "2026-01-24",
+  "assets": {
+    "directory": "./dist"
+  }
+}

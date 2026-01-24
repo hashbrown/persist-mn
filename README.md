@@ -45,10 +45,13 @@ website: "https://example.com"
 
 See existing files in `src/content/businesses/` for examples.
 
-## Building for Production
+## Deployment
 
-```bash
-npm run build
-```
+The site automatically deploys to Cloudflare Pages when you push to the `main` branch on GitHub.
 
-For technical documentation, deployment guides, and architecture details, see [DEVELOPER_GUIDE.md](./DEVELOPER_GUIDE.md).
+**Setup:**
+1. Push this repository to GitHub
+2. Connect the repository in Cloudflare Pages dashboard
+3. Cloudflare will use `wrangler.jsonc` to configure the deployment
+
+For technical documentation and deployment details, see [DEVELOPER_GUIDE.md](./DEVELOPER_GUIDE.md).
