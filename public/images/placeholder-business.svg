@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#e5e7eb"/>
+  <g transform="translate(200, 150)">
+    <circle r="40" fill="#9ca3af"/>
+    <rect x="-30" y="-60" width="60" height="40" rx="4" fill="#9ca3af"/>
+    <path d="M -50 10 L -30 -20 L 30 -20 L 50 10 Z" fill="#6b7280"/>
+  </g>
+  <text x="200" y="260" font-size="16" text-anchor="middle" fill="#6b7280" font-family="sans-serif">Minnesota Business</text>
+</svg>

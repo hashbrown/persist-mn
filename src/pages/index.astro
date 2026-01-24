@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import CategoryFilter from '../components/CategoryFilter.astro';
+import BusinessCard from '../components/BusinessCard.astro';
+import Pagination from '../components/Pagination.astro';
+
+const ITEMS_PER_PAGE = 50;
+
+// Get all businesses
+const allBusinesses = await getCollection('businesses');
+
+// Sort by name
+const businesses = allBusinesses.sort((a, b) =>
+  a.data.name.localeCompare(b.data.name)
+);
+
+// Paginate
+const totalPages = Math.ceil(businesses.length / ITEMS_PER_PAGE);
+const currentPage = 1;
+const startIndex = 0;
+const endIndex = ITEMS_PER_PAGE;
+const paginatedBusinesses = businesses.slice(startIndex, endIndex);
+---
+
+<Layout title="Persist-MN - Supporting Minnesota Businesses">
+  <Header />
+  <CategoryFilter />
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="mb-6">
+      <h2 class="text-2xl font-bold text-gray-900">
+        All Businesses
+      </h2>
+      <p class="text-gray-600 mt-1">
+        {businesses.length} businesses supporting Minnesota values
+      </p>
+    </div>
+
+    <div class="space-y-6">
+      {paginatedBusinesses.map((business) => (
+        <BusinessCard business={business} />
+      ))}
+    </div>
+
+    <Pagination
+      currentPage={currentPage}
+      totalPages={totalPages}
+      baseUrl=""
+    />
+  </main>
+</Layout>

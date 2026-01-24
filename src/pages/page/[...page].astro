@@ -1,0 +1,65 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import CategoryFilter from '../../components/CategoryFilter.astro';
+import BusinessCard from '../../components/BusinessCard.astro';
+import Pagination from '../../components/Pagination.astro';
+
+export const getStaticPaths = (async () => {
+  const ITEMS_PER_PAGE = 50;
+  const allBusinesses = await getCollection('businesses');
+  const businesses = allBusinesses.sort((a, b) =>
+    a.data.name.localeCompare(b.data.name)
+  );
+
+  const totalPages = Math.ceil(businesses.length / ITEMS_PER_PAGE);
+
+  return Array.from({ length: totalPages - 1 }, (_, i) => {
+    const page = i + 2; // Start from page 2
+    const startIndex = (page - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+
+    return {
+      params: { page: page.toString() },
+      props: {
+        businesses: businesses.slice(startIndex, endIndex),
+        currentPage: page,
+        totalPages,
+        totalBusinesses: businesses.length,
+      },
+    };
+  });
+}) satisfies GetStaticPaths;
+
+const { businesses, currentPage, totalPages, totalBusinesses } = Astro.props;
+---
+
+<Layout title={`Persist-MN - Page ${currentPage}`}>
+  <Header />
+  <CategoryFilter />
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="mb-6">
+      <h2 class="text-2xl font-bold text-gray-900">
+        All Businesses
+      </h2>
+      <p class="text-gray-600 mt-1">
+        {totalBusinesses} businesses supporting Minnesota values
+      </p>
+    </div>
+
+    <div class="space-y-6">
+      {businesses.map((business) => (
+        <BusinessCard business={business} />
+      ))}
+    </div>
+
+    <Pagination
+      currentPage={currentPage}
+      totalPages={totalPages}
+      baseUrl=""
+    />
+  </main>
+</Layout>

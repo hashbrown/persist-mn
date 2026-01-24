@@ -1,0 +1,89 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import CategoryFilter from '../../../components/CategoryFilter.astro';
+import BusinessCard from '../../../components/BusinessCard.astro';
+import Pagination from '../../../components/Pagination.astro';
+import { CATEGORIES, getCategorySlug } from '../../../utils/categories';
+
+export const getStaticPaths = (async () => {
+  const ITEMS_PER_PAGE = 50;
+  const allBusinesses = await getCollection('businesses');
+
+  const paths = [];
+
+  for (const category of CATEGORIES) {
+    const categorySlug = getCategorySlug(category);
+    const filteredBusinesses = allBusinesses
+      .filter(b => b.data.category === category)
+      .sort((a, b) => a.data.name.localeCompare(b.data.name));
+
+    const totalPages = Math.ceil(filteredBusinesses.length / ITEMS_PER_PAGE);
+
+    // Page 1 (no page param needed, handled by index route)
+    paths.push({
+      params: { category: categorySlug, page: undefined },
+      props: {
+        businesses: filteredBusinesses.slice(0, ITEMS_PER_PAGE),
+        category: category,
+        categorySlug,
+        currentPage: 1,
+        totalPages,
+        totalBusinesses: filteredBusinesses.length,
+      },
+    });
+
+    // Subsequent pages
+    for (let i = 2; i <= totalPages; i++) {
+      const startIndex = (i - 1) * ITEMS_PER_PAGE;
+      const endIndex = startIndex + ITEMS_PER_PAGE;
+
+      paths.push({
+        params: { category: categorySlug, page: i.toString() },
+        props: {
+          businesses: filteredBusinesses.slice(startIndex, endIndex),
+          category: category,
+          categorySlug,
+          currentPage: i,
+          totalPages,
+          totalBusinesses: filteredBusinesses.length,
+        },
+      });
+    }
+  }
+
+  return paths;
+}) satisfies GetStaticPaths;
+
+const { businesses, category, categorySlug, currentPage, totalPages, totalBusinesses } = Astro.props;
+---
+
+<Layout title={`${category} - Persist-MN`}>
+  <Header />
+  <CategoryFilter currentCategory={categorySlug} />
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="mb-6">
+      <h2 class="text-2xl font-bold text-gray-900">
+        {category}
+      </h2>
+      <p class="text-gray-600 mt-1">
+        {totalBusinesses} {category.toLowerCase()} businesses supporting Minnesota values
+      </p>
+    </div>
+
+    <div class="space-y-6">
+      {businesses.map((business) => (
+        <BusinessCard business={business} />
+      ))}
+    </div>
+
+    <Pagination
+      currentPage={currentPage}
+      totalPages={totalPages}
+      baseUrl={`/category/${categorySlug}`}
+    />
+  </main>
+</Layout>
