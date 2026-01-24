@@ -1,0 +1,58 @@
+package.json
+  1798e7d46547a805 22-23
+scripts/README.md
+  1798e7d46547a805 1-101
+split-csv.sh
+  679e660adc8b7dae 1-42
+src/components/BusinessCard.astro
+  1798e7d46547a805 9-12,23-27,29,32-44,46-48,52-53,61-64,68-72,78,81
+.gitignore
+  1798e7d46547a805 26-33
+.env.example
+  1798e7d46547a805 1-2,4-6
+src/utils/categories.ts
+  1798e7d46547a805 3
+  679e660adc8b7dae 7
+scripts/import-businesses.js
+  679e660adc8b7dae 54,63,221-223
+  1798e7d46547a805 1-10,12-40,42-53,55-62,64-220,224-300
+README.md
+  1798e7d46547a805 35,48-68
+businesses.csv.example
+  1798e7d46547a805 1-6
+.working_docs/session_reports/data-loader_01.md
+  1798e7d46547a805 1-127
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "b2ad84e366b2c8cba866e2cbefb2fca9cba79b67",
+  "prompts": {
+    "1798e7d46547a805": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "08392382-1b90-4914-989d-ae3fd91e1fd8",
+        "model": "claude-sonnet-4-5-20250929"
+      },
+      "human_author": "Brad Armstrong <hashbrown1+git@gmail.com>",
+      "messages": [],
+      "total_additions": 767,
+      "total_deletions": 135,
+      "accepted_lines": 677,
+      "overriden_lines": 3
+    },
+    "679e660adc8b7dae": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6214e708-05c2-4142-bb4e-1e1fc5877031",
+        "model": "claude-sonnet-4-5-20250929"
+      },
+      "human_author": "Brad Armstrong <hashbrown1+git@gmail.com>",
+      "messages": [],
+      "total_additions": 48,
+      "total_deletions": 10,
+      "accepted_lines": 48,
+      "overriden_lines": 0
+    }
+  }
+}
