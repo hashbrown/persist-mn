@@ -1,0 +1,65 @@
+src/content/businesses/anchor-fish-and-chips.md
+  118802ad3d14d8fb 1-10
+src/utils/categories.ts
+  118802ad3d14d8fb 1-16
+src/components/BusinessCard.astro
+  118802ad3d14d8fb 1-95
+public/favicon.svg
+  118802ad3d14d8fb 1-4
+src/pages/category/[category]/[...page].astro
+  118802ad3d14d8fb 1-89
+astro.config.mjs
+  118802ad3d14d8fb 1,4-6,8-11
+src/content/config.ts
+  118802ad3d14d8fb 1-26
+src/components/Pagination.astro
+  118802ad3d14d8fb 1-68
+src/content/businesses/patina-gifts.md
+  118802ad3d14d8fb 1-10
+package.json
+  118802ad3d14d8fb 1-12,16-21
+src/components/CategoryFilter.astro
+  118802ad3d14d8fb 1-44
+src/styles/global.css
+  118802ad3d14d8fb 1-9
+src/components/Header.astro
+  118802ad3d14d8fb 1-15
+src/pages/index.astro
+  118802ad3d14d8fb 1-53
+src/content/businesses/community-law-office.md
+  118802ad3d14d8fb 1-7
+README.md
+  118802ad3d14d8fb 1-2,4,7-54
+src/layouts/Layout.astro
+  118802ad3d14d8fb 1-34
+src/pages/page/[...page].astro
+  118802ad3d14d8fb 1-65
+public/images/placeholder-business.svg
+  118802ad3d14d8fb 1-9
+tsconfig.json
+  118802ad3d14d8fb 1-7
+DEVELOPER_GUIDE.md
+  118802ad3d14d8fb 1-434
+.gitignore
+  118802ad3d14d8fb 1-25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.31",
+  "base_commit_sha": "32c7fdaf01cfca2585139dc34f02ab16573cd606",
+  "prompts": {
+    "118802ad3d14d8fb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "57625690-9e31-4eae-8d68-e4cd275a3e80",
+        "model": "claude-sonnet-4-5-20250929"
+      },
+      "human_author": "Brad Armstrong <hashbrown1+git@gmail.com>",
+      "messages": [],
+      "total_additions": 1241,
+      "total_deletions": 144,
+      "accepted_lines": 1097,
+      "overriden_lines": 3
+    }
+  }
+}
