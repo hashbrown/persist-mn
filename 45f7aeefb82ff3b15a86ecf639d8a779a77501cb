@@ -1,0 +1,27 @@
+scripts/import-businesses.js
+  679e660adc8b7dae 34-35,166-168,268,272-274,285-287
+.gitignore
+  679e660adc8b7dae 30-31
+src/utils/categories.ts
+  679e660adc8b7dae 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "45f7aeefb82ff3b15a86ecf639d8a779a77501cb",
+  "prompts": {
+    "679e660adc8b7dae": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6214e708-05c2-4142-bb4e-1e1fc5877031",
+        "model": "claude-sonnet-4-5-20250929"
+      },
+      "human_author": "Brad Armstrong <hashbrown1+git@gmail.com>",
+      "messages": [],
+      "total_additions": 16,
+      "total_deletions": 5,
+      "accepted_lines": 15,
+      "overriden_lines": 1
+    }
+  }
+}
