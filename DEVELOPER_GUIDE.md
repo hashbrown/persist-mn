@@ -29,7 +29,7 @@ const businessCollection = defineCollection({
   type: 'content',
   schema: z.object({
     name: z.string(),
-    category: z.enum(['Restaurant/Bar', 'Retail', 'Services', 'Organization']),
+    category: z.enum(['Food/Drink', 'Retail', 'Services', 'Organization']),
     location: z.string(),
     // ... additional fields
   }).refine(

@@ -1,8 +1,10 @@
 export const CATEGORIES = [
-  'Restaurant/Bar',
+  'Food/Drink',
+  'Grocery/Convenience',
   'Retail',
   'Services',
   'Organization',
+  'Other',
 ] as const;
 
 export type Category = typeof CATEGORIES[number];
