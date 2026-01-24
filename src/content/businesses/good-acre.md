@@ -1,6 +1,6 @@
 ---
 name: "The Good Acre"
-category: "Fook/Drink"
+category: "Food/Drink"
 location: "Falcon Heights, MN"
 address: "1790 Larpenteur Ave W, Falcon Heights, MN 55113, USA"
 phone: "(651) 493-7158"
