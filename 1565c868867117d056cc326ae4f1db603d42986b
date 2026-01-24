@@ -1,0 +1,29 @@
+DEVELOPER_GUIDE.md
+  118802ad3d14d8fb 239,241-251,255-258,266
+package.json
+  118802ad3d14d8fb 10-12
+wrangler.jsonc
+  118802ad3d14d8fb 1-8
+README.md
+  118802ad3d14d8fb 48,50,52-55,57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "1565c868867117d056cc326ae4f1db603d42986b",
+  "prompts": {
+    "118802ad3d14d8fb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "57625690-9e31-4eae-8d68-e4cd275a3e80",
+        "model": "claude-sonnet-4-5-20250929"
+      },
+      "human_author": "Brad Armstrong <hashbrown1+git@gmail.com>",
+      "messages": [],
+      "total_additions": 38,
+      "total_deletions": 15,
+      "accepted_lines": 38,
+      "overriden_lines": 0
+    }
+  }
+}
