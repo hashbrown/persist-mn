@@ -27,6 +27,8 @@ yarn-error.log*
 # Import script outputs
 not-found.csv
 unmapped-categories.json
+*-not-found.csv
+*-unmapped-categories.json
 businesses-full.csv
 clean-csv.js
 businesses.csv

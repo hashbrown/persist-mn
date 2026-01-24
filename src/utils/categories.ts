@@ -4,6 +4,7 @@ export const CATEGORIES = [
   'Retail',
   'Services',
   'Organization',
+  'Entertainment',
   'Other',
 ] as const;
 

@@ -10,7 +10,7 @@ dotenv.config();
 const CATEGORY_MAP = {
   'Food/Drink': [
     'restaurant', 'bar', 'cafe', 'night_club', 'meal_takeaway',
-    'meal_delivery', 'bakery', 'food'
+    'meal_delivery', 'bakery', 'food', 'market', 'tea_house'
   ],
   'Grocery/Convenience': [
     'grocery_or_supermarket', 'convenience_store', 'liquor_store',
@@ -31,6 +31,10 @@ const CATEGORY_MAP = {
   'Organization': [
     'church', 'library', 'school', 'community_center',
     'local_government_office', 'non_profit', 'social_services'
+  ],
+  'Entertainment': [
+    'video_arcade', 'event_venue', 'museum', 'planetarium', 'tourist_attraction',
+    'movie_theater'
   ]
 };
 
@@ -159,6 +163,9 @@ async function importBusinesses(csvPath) {
     process.exit(1);
   }
 
+  // Extract base filename for error reports (e.g., "businesses-batch-1" from "businesses-batch-1.csv")
+  const baseFilename = path.basename(csvPath, '.csv');
+
   // Read and parse CSV
   let records;
   try {
@@ -258,12 +265,13 @@ async function importBusinesses(csvPath) {
   console.log(`⚠️  Unmapped categories: ${Object.keys(stats.unmappedCategories).length}`);
   console.log(`❌ Errors: ${stats.errors.length}`);
 
-  // Save reports
+  // Save reports with batch-specific filenames
   if (stats.notFound.length > 0) {
     const notFoundCsv = 'name,city\n' +
       stats.notFound.map(b => `"${b.name}","${b.city}"`).join('\n');
-    fs.writeFileSync('./not-found.csv', notFoundCsv);
-    console.log('\n📄 Not found businesses saved to: not-found.csv');
+    const notFoundFilename = `${baseFilename}-not-found.csv`;
+    fs.writeFileSync(notFoundFilename, notFoundCsv);
+    console.log(`\n📄 Not found businesses saved to: ${notFoundFilename}`);
   }
 
   if (Object.keys(stats.unmappedCategories).length > 0) {
@@ -274,8 +282,9 @@ async function importBusinesses(csvPath) {
     }
 
     const unmappedJson = JSON.stringify(stats.unmappedCategories, null, 2);
-    fs.writeFileSync('./unmapped-categories.json', unmappedJson);
-    console.log('\n📄 Unmapped categories saved to: unmapped-categories.json');
+    const unmappedFilename = `${baseFilename}-unmapped-categories.json`;
+    fs.writeFileSync(unmappedFilename, unmappedJson);
+    console.log(`\n📄 Unmapped categories saved to: ${unmappedFilename}`);
   }
 
   if (stats.errors.length > 0) {
