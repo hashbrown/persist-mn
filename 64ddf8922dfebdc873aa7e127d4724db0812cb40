@@ -1,0 +1,41 @@
+src/utils/content.ts
+  679e660adc8b7dae 1-47
+src/pages/index.astro
+  679e660adc8b7dae 8-9,27,34,37
+src/pages/category/[category]/[...page].astro
+  679e660adc8b7dae 10-11,45,64,74
+src/components/CategoryFilter.astro
+  679e660adc8b7dae 3,24
+src/components/Header.astro
+  679e660adc8b7dae 2,10,12
+src/components/BusinessCard.astro
+  679e660adc8b7dae 3,17
+src/components/Pagination.astro
+  679e660adc8b7dae 2-3,28,34,66
+src/utils/pagination.ts
+  679e660adc8b7dae 1
+src/pages/page/[...page].astro
+  679e660adc8b7dae 9-10,40,47,50
+src/layouts/Layout.astro
+  679e660adc8b7dae 3,10,29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "64ddf8922dfebdc873aa7e127d4724db0812cb40",
+  "prompts": {
+    "679e660adc8b7dae": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6214e708-05c2-4142-bb4e-1e1fc5877031",
+        "model": "claude-sonnet-4-5-20250929"
+      },
+      "human_author": "Brad Armstrong <hashbrown1+git@gmail.com>",
+      "messages": [],
+      "total_additions": 78,
+      "total_deletions": 22,
+      "accepted_lines": 78,
+      "overriden_lines": 0
+    }
+  }
+}
