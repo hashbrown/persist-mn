@@ -4,24 +4,24 @@ import { CONTENT } from '../utils/content';
 
 <header class="bg-white shadow-sm border-b border-gray-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-    <div class="flex items-center justify-between">
-      <div>
-        <div class="flex items-baseline gap-3 flex-wrap">
+    <div class="flex flex-col gap-1">
+      <div class="flex items-center justify-between gap-4">
+        <div class="flex items-baseline gap-3 flex-wrap min-w-0">
           <h1 class="text-3xl font-bold text-blue-600">
             <a href="/">{CONTENT.site.name}</a>
           </h1>
-          <span class="text-sm text-gray-500">{CONTENT.site.motto}</span>
+          <span class="text-sm text-gray-500 shrink-0">{CONTENT.site.motto}</span>
         </div>
-        <p class="text-base text-gray-600 mt-1">{CONTENT.site.tagline}</p>
+        <nav class="flex items-center gap-4 shrink-0" aria-label="Site navigation">
+          <a
+            href="/about"
+            class="text-gray-600 hover:text-blue-600 font-medium transition-colors"
+          >
+            {CONTENT.nav.about}
+          </a>
+        </nav>
       </div>
-      <nav class="flex items-center gap-4" aria-label="Site navigation">
-        <a
-          href="/about"
-          class="text-gray-600 hover:text-blue-600 font-medium transition-colors"
-        >
-          {CONTENT.nav.about}
-        </a>
-      </nav>
+      <p class="text-base text-gray-600">{CONTENT.site.tagline}</p>
     </div>
   </div>
 </header>
