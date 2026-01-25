@@ -7,9 +7,10 @@ import CategoryFilter from '../../../components/CategoryFilter.astro';
 import BusinessCard from '../../../components/BusinessCard.astro';
 import Pagination from '../../../components/Pagination.astro';
 import { CATEGORIES, getCategorySlug } from '../../../utils/categories';
+import { ITEMS_PER_PAGE } from '../../../utils/pagination';
+import { CONTENT } from '../../../utils/content';
 
 export const getStaticPaths = (async () => {
-  const ITEMS_PER_PAGE = 50;
   const allBusinesses = await getCollection('businesses');
 
   const paths = [];
@@ -41,7 +42,7 @@ export const getStaticPaths = (async () => {
       const endIndex = startIndex + ITEMS_PER_PAGE;
 
       paths.push({
-        params: { category: categorySlug, page: i.toString() },
+        params: { category: categorySlug, page: `page/${i}` },
         props: {
           businesses: filteredBusinesses.slice(startIndex, endIndex),
           category: category,
@@ -60,7 +61,7 @@ export const getStaticPaths = (async () => {
 const { businesses, category, categorySlug, currentPage, totalPages, totalBusinesses } = Astro.props;
 ---
 
-<Layout title={`${category} - Persist-MN`}>
+<Layout title={CONTENT.pages.category.titleTemplate(category)}>
   <Header />
   <CategoryFilter currentCategory={categorySlug} />
 
@@ -70,7 +71,7 @@ const { businesses, category, categorySlug, currentPage, totalPages, totalBusine
         {category}
       </h2>
       <p class="text-gray-600 mt-1">
-        {totalBusinesses} {category.toLowerCase()} businesses supporting Minnesota values
+        {CONTENT.pages.category.descriptionTemplate(totalBusinesses, category)}
       </p>
     </div>
 

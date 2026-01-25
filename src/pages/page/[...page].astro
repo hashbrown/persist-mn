@@ -6,9 +6,10 @@ import Header from '../../components/Header.astro';
 import CategoryFilter from '../../components/CategoryFilter.astro';
 import BusinessCard from '../../components/BusinessCard.astro';
 import Pagination from '../../components/Pagination.astro';
+import { ITEMS_PER_PAGE } from '../../utils/pagination';
+import { CONTENT } from '../../utils/content';
 
 export const getStaticPaths = (async () => {
-  const ITEMS_PER_PAGE = 50;
   const allBusinesses = await getCollection('businesses');
   const businesses = allBusinesses.sort((a, b) =>
     a.data.name.localeCompare(b.data.name)
@@ -36,17 +37,17 @@ export const getStaticPaths = (async () => {
 const { businesses, currentPage, totalPages, totalBusinesses } = Astro.props;
 ---
 
-<Layout title={`Persist-MN - Page ${currentPage}`}>
+<Layout title={CONTENT.pages.pagination.titleTemplate(currentPage)}>
   <Header />
   <CategoryFilter />
 
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <div class="mb-6">
       <h2 class="text-2xl font-bold text-gray-900">
-        All Businesses
+        {CONTENT.pages.home.heading}
       </h2>
       <p class="text-gray-600 mt-1">
-        {totalBusinesses} businesses supporting Minnesota values
+        {CONTENT.pages.pagination.descriptionTemplate(totalBusinesses)}
       </p>
     </div>
 

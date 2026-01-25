@@ -5,8 +5,8 @@ import Header from '../components/Header.astro';
 import CategoryFilter from '../components/CategoryFilter.astro';
 import BusinessCard from '../components/BusinessCard.astro';
 import Pagination from '../components/Pagination.astro';
-
-const ITEMS_PER_PAGE = 50;
+import { ITEMS_PER_PAGE } from '../utils/pagination';
+import { CONTENT } from '../utils/content';
 
 // Get all businesses
 const allBusinesses = await getCollection('businesses');
@@ -24,17 +24,17 @@ const endIndex = ITEMS_PER_PAGE;
 const paginatedBusinesses = businesses.slice(startIndex, endIndex);
 ---
 
-<Layout title="Persist-MN - Supporting Minnesota Businesses">
+<Layout title={CONTENT.pages.home.title}>
   <Header />
   <CategoryFilter />
 
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <div class="mb-6">
       <h2 class="text-2xl font-bold text-gray-900">
-        All Businesses
+        {CONTENT.pages.home.heading}
       </h2>
       <p class="text-gray-600 mt-1">
-        {businesses.length} businesses supporting their community
+        {CONTENT.pages.home.descriptionTemplate(businesses.length)}
       </p>
     </div>
 
