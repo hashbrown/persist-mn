@@ -28,10 +28,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # Import script outputs
-not-found.csv
-unmapped-categories.json
-*-not-found.csv
-*-unmapped-categories.json
-clean-csv.js
-businesses.csv
-businesses-batch-*.csv
+scripts/output
