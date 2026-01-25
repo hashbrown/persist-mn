@@ -1,4 +1,6 @@
 ---
+import { CONTENT } from '../utils/content';
+
 interface Props {
   currentPage: number;
   totalPages: number;
@@ -23,13 +25,13 @@ const showPages = pages.filter(page => {
 ---
 
 {totalPages > 1 && (
-  <nav class="flex justify-center items-center space-x-2 mt-12" aria-label="Pagination">
+  <nav class="flex justify-center items-center space-x-2 mt-12" aria-label={CONTENT.ui.labels.pagination}>
     {currentPage > 1 && (
       <a
         href={getPageUrl(currentPage - 1)}
         class="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
       >
-        Previous
+        {CONTENT.ui.buttons.previous}
       </a>
     )}
 
@@ -61,7 +63,7 @@ const showPages = pages.filter(page => {
         href={getPageUrl(currentPage + 1)}
         class="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
       >
-        Next
+        {CONTENT.ui.buttons.next}
       </a>
     )}
   </nav>

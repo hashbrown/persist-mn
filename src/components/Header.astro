@@ -1,4 +1,5 @@
 ---
+import { CONTENT } from '../utils/content';
 ---
 
 <header class="bg-white shadow-sm border-b border-gray-200">
@@ -6,9 +7,9 @@
     <div class="flex items-center justify-between">
       <div>
         <h1 class="text-3xl font-bold text-blue-600">
-          <a href="/">Persist MN</a>
+          <a href="/">{CONTENT.site.name}</a>
         </h1>
-        <p class="text-gray-600 mt-1">Supporting Minnesota businesses that support humankind.</p>
+        <p class="text-gray-600 mt-1">{CONTENT.site.tagline}</p>
       </div>
     </div>
   </div>

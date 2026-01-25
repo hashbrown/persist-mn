@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { CONTENT } from '../utils/content';
 
 interface Props {
   business: CollectionEntry<'businesses'>;
@@ -13,7 +14,7 @@ const displayLocation = address || location;
 
 // Determine primary CTA
 const primaryLink = website || googleMapsUrl || '';
-const primaryLinkText = website ? 'Visit Website' : 'View on Maps';
+const primaryLinkText = website ? CONTENT.ui.buttons.visitWebsite : CONTENT.ui.buttons.viewOnMaps;
 
 // Format phone for tel: link
 const phoneLink = phone?.replace(/\D/g, '');

@@ -1,5 +1,6 @@
 ---
 import { CATEGORIES, getCategorySlug } from '../utils/categories';
+import { CONTENT } from '../utils/content';
 
 interface Props {
   currentCategory?: string;
@@ -20,7 +21,7 @@ const { currentCategory } = Astro.props;
             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
         ]}
       >
-        All Businesses
+        {CONTENT.ui.buttons.allBusinesses}
       </a>
       {CATEGORIES.map((category) => {
         const slug = getCategorySlug(category);

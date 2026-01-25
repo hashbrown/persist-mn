@@ -1,5 +1,5 @@
 ---
-name: "#FACE"
+name: "FACE"
 category: "Services"
 location: "Minneapolis, MN"
 address: "925 W Lake St, Minneapolis, MN 55408, USA"
