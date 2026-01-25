@@ -1,0 +1,25 @@
+ADDING_A_BUSINESS.md
+  47f230fe6d53ddfa 1-76
+CONTRIBUTING.md
+  47f230fe6d53ddfa 1-21,23-52,54-81
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "fc3d42df044b0f4d591f20f46686987980265718",
+  "prompts": {
+    "47f230fe6d53ddfa": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "296a330f-bb59-4ddf-9679-4698d42e38f1",
+        "model": "gpt-5.2"
+      },
+      "human_author": "Brad Armstrong <hashbrown1+git@gmail.com>",
+      "messages": [],
+      "total_additions": 215,
+      "total_deletions": 57,
+      "accepted_lines": 155,
+      "overriden_lines": 2
+    }
+  }
+}
