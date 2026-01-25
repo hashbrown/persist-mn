@@ -1,0 +1,23 @@
+src/components/Header.astro
+  a6fab881851f995e 7-9,13,15,20-22,24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "bf526e381ecb7206fe7f0db522179ddc855fa7d1",
+  "prompts": {
+    "a6fab881851f995e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d8edf513-51b1-46c9-8041-5b43a1731b7f",
+        "model": "default"
+      },
+      "human_author": "Brad Armstrong <hashbrown1+git@gmail.com>",
+      "messages": [],
+      "total_additions": 13,
+      "total_deletions": 13,
+      "accepted_lines": 9,
+      "overriden_lines": 0
+    }
+  }
+}
