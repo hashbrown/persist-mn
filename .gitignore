@@ -1,3 +1,6 @@
+# local working dirs
+.scratch/
+
 # Build outputs
 dist/
 .astro/
@@ -29,7 +32,6 @@ not-found.csv
 unmapped-categories.json
 *-not-found.csv
 *-unmapped-categories.json
-businesses-full.csv
 clean-csv.js
 businesses.csv
 businesses-batch-*.csv
