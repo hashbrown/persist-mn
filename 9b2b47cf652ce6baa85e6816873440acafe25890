@@ -1,0 +1,31 @@
+src/pages/about.astro
+  a6fab881851f995e 1-39
+src/components/Pagination.astro
+  a6fab881851f995e 14
+src/utils/content.ts
+  a6fab881851f995e 9,20-21,23-24,36-39
+src/components/Header.astro
+  a6fab881851f995e 9-10,12-15,17-24
+src/styles/global.css
+  a6fab881851f995e 10-46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "9b2b47cf652ce6baa85e6816873440acafe25890",
+  "prompts": {
+    "a6fab881851f995e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d8edf513-51b1-46c9-8041-5b43a1731b7f",
+        "model": "default"
+      },
+      "human_author": "Brad Armstrong <hashbrown1+git@gmail.com>",
+      "messages": [],
+      "total_additions": 120,
+      "total_deletions": 19,
+      "accepted_lines": 103,
+      "overriden_lines": 1
+    }
+  }
+}
