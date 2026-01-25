@@ -6,6 +6,7 @@
 export const CONTENT = {
   site: {
     name: 'Persist MN',
+    motto: 'Persist. Prevail.',
     tagline: 'Supporting Minnesota businesses that support humankind.',
     defaultDescription: 'Supporting Minnesota businesses that support humankind',
   },
@@ -16,6 +17,11 @@ export const CONTENT = {
       heading: 'All Businesses',
       descriptionTemplate: (count: number) => `${count} businesses supporting their community`,
     },
+    about: {
+      title: 'About - Persist-MN',
+      heading: 'Persist MN',
+      defaultDescription: 'Learn about Persist MN and our mission to support Minnesota businesses that support humankind.',
+    },
     pagination: {
       titleTemplate: (page: number) => `Persist-MN - Page ${page}`,
       descriptionTemplate: (count: number) => `${count} businesses supporting Minnesota values`,
@@ -25,6 +31,10 @@ export const CONTENT = {
       descriptionTemplate: (count: number, category: string) =>
         `${count} ${category.toLowerCase()} businesses supporting Minnesota values`,
     },
+  },
+
+  nav: {
+    about: 'About',
   },
 
   ui: {

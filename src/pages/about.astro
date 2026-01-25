@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import { CONTENT } from '../utils/content';
+---
+
+<Layout title={CONTENT.pages.about.title} description={CONTENT.pages.about.defaultDescription}>
+  <Header />
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <section class="about-persist">
+      <p class="headword">Persist</p>
+
+      <p class="line">
+        <strong>To Persist is to remain, to endure.</strong>
+        Not untouched, but not undone.
+      </p>
+
+      <p class="line">
+        <strong>To Persist is to show up, to stay engaged.</strong>
+        In work, relationships, community, life.
+      </p>
+
+      <p class="line">
+        <strong>To Persist is to maintain, to attend.</strong>
+        Celebrate birthdays, have parties. Weed the garden, wash the car.
+      </p>
+
+      <p class="line">
+        <strong>To Persist is to sustain, ourselves and our community.</strong>
+        So that daily life, in all its importance, can continue.
+      </p>
+
+      <p class="closing">
+        <strong>Persist. Prevail.</strong>
+      </p>
+    </section>
+  </main>
+</Layout>
