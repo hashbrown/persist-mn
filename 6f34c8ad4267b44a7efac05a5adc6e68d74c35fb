@@ -1,0 +1,37 @@
+ADDING_A_BUSINESS.md
+  38b143b03cf47af4 13-27,36,38-41,43,46-49,55,63,69-71,73-75,87-89
+src/content/config.ts
+  38b143b03cf47af4 7,9-15,19-20,22-25,27,29
+src/pages/index.astro
+  38b143b03cf47af4 14,16
+scripts/add-business.js
+  38b143b03cf47af4 1-311
+src/pages/page/[...page].astro
+  38b143b03cf47af4 15
+package.json
+  38b143b03cf47af4 10
+src/pages/category/[category]/[...page].astro
+  38b143b03cf47af4 22
+src/components/BusinessCard.astro
+  38b143b03cf47af4 10-11,14-15,27,31,47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "6f34c8ad4267b44a7efac05a5adc6e68d74c35fb",
+  "prompts": {
+    "38b143b03cf47af4": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "2dcbfc74-6d21-404d-aa90-0f1e5da1e503",
+        "model": "gpt-5.2"
+      },
+      "human_author": "Brad Armstrong <hashbrown1+git@gmail.com>",
+      "messages": [],
+      "total_additions": 710,
+      "total_deletions": 144,
+      "accepted_lines": 597,
+      "overriden_lines": 1
+    }
+  }
+}
