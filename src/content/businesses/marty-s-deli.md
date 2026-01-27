@@ -1,10 +1,12 @@
 ---
-name: "Marty's Deli"
+displayName: "Marty's Deli"
 category: "Food/Drink"
-location: "Minneapolis, MN"
-address: "400 NE Lowry Ave, Minneapolis, MN 55418, USA"
+address: "400 NE Lowry Ave, Minneapolis"
+city: "Minneapolis"
+state: "MN"
+postalCode: "55418"
 phone: "(612) 886-3952"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "http://martysdeli.com/"
+websiteUrl: "http://martysdeli.com/"
 googleMapsUrl: "https://maps.google.com/?cid=14823059037414349224&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

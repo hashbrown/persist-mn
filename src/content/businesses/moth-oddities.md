@@ -1,9 +1,11 @@
 ---
-name: "Moth Oddities"
+displayName: "Moth Oddities"
 category: "Retail"
-location: "Minneapolis, MN"
-address: "13 5th St NE, Minneapolis, MN 55413, USA"
+address: "13 5th St NE, Minneapolis"
+city: "Minneapolis"
+state: "MN"
+postalCode: "55413"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "http://www.mothoddities.com/"
+websiteUrl: "http://www.mothoddities.com/"
 googleMapsUrl: "https://maps.google.com/?cid=17908916234974868330&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

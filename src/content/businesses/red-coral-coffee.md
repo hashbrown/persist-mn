@@ -1,10 +1,12 @@
 ---
-name: "Red Coral Coffee"
+displayName: "Red Coral Coffee"
 category: "Food/Drink"
-location: "Minneapolis, MN"
-address: "4457 42nd Ave S, Minneapolis, MN 55406, USA"
+address: "4457 42nd Ave S, Minneapolis"
+city: "Minneapolis"
+state: "MN"
+postalCode: "55406"
 phone: "(612) 888-1050"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "http://www.redcoralcoffee.com/"
+websiteUrl: "http://www.redcoralcoffee.com/"
 googleMapsUrl: "https://maps.google.com/?cid=13225652801643958154&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

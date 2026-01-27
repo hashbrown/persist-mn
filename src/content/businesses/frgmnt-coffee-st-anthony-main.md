@@ -1,9 +1,11 @@
 ---
-name: "FRGMNT Coffee - St. Anthony Main"
+displayName: "FRGMNT Coffee - St. Anthony Main"
 category: "Food/Drink"
-location: "Minneapolis, MN"
-address: "43 SE Main St, Minneapolis, MN 55414, USA"
+address: "43 SE Main St, Minneapolis"
+city: "Minneapolis"
+state: "MN"
+postalCode: "55414"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "http://frgmntcoffee.com/"
+websiteUrl: "http://frgmntcoffee.com/"
 googleMapsUrl: "https://maps.google.com/?cid=5149106651815552657&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

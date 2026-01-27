@@ -1,10 +1,12 @@
 ---
-name: "Little Thistle Brewing"
+displayName: "Little Thistle Brewing"
 category: "Food/Drink"
-location: "Rochester, MN"
-address: "2031 14th St NW, Rochester, MN 55901, USA"
+address: "2031 14th St NW, Rochester"
+city: "Rochester"
+state: "MN"
+postalCode: "55901"
 phone: "(507) 226-8014"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "http://littlethistlebeer.com/"
+websiteUrl: "http://littlethistlebeer.com/"
 googleMapsUrl: "https://maps.google.com/?cid=2747924973138154325&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

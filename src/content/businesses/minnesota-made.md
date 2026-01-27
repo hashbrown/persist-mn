@@ -1,9 +1,11 @@
 ---
-name: "Minnesota Made"
+displayName: "Minnesota Made"
 category: "Retail"
-location: "Stillwater, MN"
-address: "210 S Main St, Stillwater, MN 55082, USA"
+address: "210 S Main St, Stillwater"
+city: "Stillwater"
+state: "MN"
+postalCode: "55082"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "http://minnesotamadeapparel.com/"
+websiteUrl: "http://minnesotamadeapparel.com/"
 googleMapsUrl: "https://maps.google.com/?cid=7982939722853243088&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

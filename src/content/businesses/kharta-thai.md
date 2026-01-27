@@ -1,10 +1,12 @@
 ---
-name: "KARTA THAI RESTAURANT @ Roseville"
+displayName: "KARTA THAI RESTAURANT @ Roseville"
 category: "Food/Drink"
-location: "Roseville, MN"
-address: "1889 Perimeter Dr, Roseville, MN 55113, USA"
+address: "1889 Perimeter Dr, Roseville"
+city: "Roseville"
+state: "MN"
+postalCode: "55113"
 phone: "(651) 756-7173"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "https://www.kartathai.com/?page_id=45"
+websiteUrl: "https://www.kartathai.com/?page_id=45"
 googleMapsUrl: "https://maps.google.com/?cid=2288291399055272618&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

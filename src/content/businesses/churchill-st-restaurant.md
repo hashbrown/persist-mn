@@ -1,10 +1,12 @@
 ---
-name: "Churchill St. Restaurant"
+displayName: "Churchill St. Restaurant"
 category: "Food/Drink"
-location: "Shoreview, MN"
-address: "4606 Churchill St, Shoreview, MN 55126, USA"
+address: "4606 Churchill St, Shoreview"
+city: "Shoreview"
+state: "MN"
+postalCode: "55126"
 phone: "(612) 466-2596"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "http://www.churchillst.com/"
+websiteUrl: "http://www.churchillst.com/"
 googleMapsUrl: "https://maps.google.com/?cid=602963663321141998&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

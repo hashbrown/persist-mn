@@ -1,10 +1,12 @@
 ---
-name: "Hour Rose Salon"
+displayName: "Hour Rose Salon"
 category: "Services"
-location: "Minneapolis, MN"
-address: "6600 W Lake St, St Louis Park, MN 55426, USA"
+address: "6600 W Lake St, St Louis Park"
+city: "St Louis Park"
+state: "MN"
+postalCode: "55426"
 phone: "(612) 232-7805"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "http://www.hourrosesalon.com/"
+websiteUrl: "http://www.hourrosesalon.com/"
 googleMapsUrl: "https://maps.google.com/?cid=15251425136095849516&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

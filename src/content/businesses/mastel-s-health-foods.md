@@ -1,10 +1,12 @@
 ---
-name: "Mastel's Health Foods"
+displayName: "Mastel's Health Foods"
 category: "Food/Drink"
-location: "St. Paul, MN"
-address: "1526 St Clair Ave, St Paul, MN 55105, USA"
+address: "1526 St Clair Ave, St Paul"
+city: "St Paul"
+state: "MN"
+postalCode: "55105"
 phone: "(651) 690-1692"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "http://www.mastels.com/"
+websiteUrl: "http://www.mastels.com/"
 googleMapsUrl: "https://maps.google.com/?cid=14839287957076609941&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---
