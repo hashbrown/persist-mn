@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import CategoryFilter from '../../components/CategoryFilter.astro';
-import BusinessCard from '../../components/BusinessCard.astro';
+import BusinessDetailCard from '../../components/BusinessDetailCard.astro';
 import { getCategorySlug } from '../../utils/categories';
 
 export const getStaticPaths = (async () => {
@@ -28,13 +28,27 @@ const categorySlug = getCategorySlug(business.data.category);
     <div class="mb-6">
       <a
         href={`/category/${categorySlug}`}
+        data-default-back-href={`/category/${categorySlug}`}
         class="text-sm font-medium text-blue-600 hover:text-blue-700"
       >
         ← Back to {business.data.category}
       </a>
     </div>
 
-    <BusinessCard business={business} />
+    <BusinessDetailCard business={business} />
   </main>
 </Layout>
+
+<script is:inline>
+  // If the user arrived from a paginated/category page via search, preserve that in the Back link.
+  const params = new URLSearchParams(window.location.search)
+  const from = params.get('from')
+  if (from) {
+    const backLink = document.querySelector('a[data-default-back-href]')
+    if (backLink instanceof HTMLAnchorElement) {
+      backLink.href = from
+      backLink.textContent = '← Back'
+    }
+  }
+</script>
 

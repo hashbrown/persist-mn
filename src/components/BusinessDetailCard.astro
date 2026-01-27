@@ -4,13 +4,11 @@ import { CONTENT } from '../utils/content';
 
 interface Props {
   business: CollectionEntry<'businesses'>;
-  from?: string;
 }
 
-const { business, from } = Astro.props;
+const { business } = Astro.props;
 const { displayName, category, address, city, state, phone, description, websiteUrl, googleMapsUrl } = business.data;
 const displayLocation = address || (city && state ? `${city}, ${state}` : undefined);
-const detailHref = from ? `/business/${business.slug}?from=${encodeURIComponent(from)}` : `/business/${business.slug}`;
 
 // Determine primary CTA
 const primaryLink = websiteUrl || googleMapsUrl || '';
@@ -20,30 +18,22 @@ const primaryLinkText = websiteUrl ? CONTENT.ui.buttons.visitWebsite : CONTENT.u
 const phoneLink = phone?.replace(/\D/g, '');
 ---
 
-<article class="relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-  <a
-    href={detailHref}
-    aria-label={`View details for ${displayName}`}
-    class="absolute inset-0 z-10 focus:outline-none focus:ring-2 focus:ring-blue-500/40"
-  >
-    <span class="sr-only">View details</span>
-  </a>
-
-  <!--
-    Make the whole card clickable via the overlay link above,
-    while allowing specific interactive elements to remain clickable.
-  -->
-  <div class="relative z-20 p-4 pointer-events-none">
+<!--
+  Separate component for business detail pages.
+  Copied from BusinessCard for now so the detail layout can evolve independently.
+-->
+<article class="bg-white rounded-lg shadow-md overflow-hidden">
+  <div class="p-4">
     <div class="flex items-start justify-between gap-4">
       <!-- Left side: Name, Location, Phone, Description -->
       <div class="flex-1 min-w-0">
-        <h2 class="text-lg font-bold text-gray-900 mb-1">
+        <h2 class="text-xl font-bold text-gray-900 mb-2">
           {displayName}
         </h2>
 
         <!-- Location -->
         {displayLocation && (googleMapsUrl ? (
-          <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" class="pointer-events-auto text-gray-600 text-sm inline-flex items-center hover:text-blue-600 group">
+          <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" class="text-gray-600 text-sm inline-flex items-center hover:text-blue-600 group">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1 flex-shrink-0 group-hover:text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -62,18 +52,18 @@ const phoneLink = phone?.replace(/\D/g, '');
 
         {/* Phone */}
         {phone && (
-          <p class="text-gray-600 text-sm flex items-center mt-0.5">
+          <p class="text-gray-600 text-sm flex items-center mt-1">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            <a href={`tel:${phoneLink}`} class="pointer-events-auto hover:text-blue-600">
+            <a href={`tel:${phoneLink}`} class="hover:text-blue-600">
               {phone}
             </a>
           </p>
         )}
 
         <!-- Description -->
-        <p class="text-gray-700 text-sm mt-2">
+        <p class="text-gray-700 text-sm mt-3">
           {description}
         </p>
       </div>
@@ -88,7 +78,7 @@ const phoneLink = phone?.replace(/\D/g, '');
           href={primaryLink}
           target="_blank"
           rel="noopener noreferrer"
-          class="pointer-events-auto inline-flex items-center px-3 py-1.5 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+          class="inline-flex items-center px-3 py-1.5 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
         >
           {primaryLinkText}
           <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -99,3 +89,4 @@ const phoneLink = phone?.replace(/\D/g, '');
     </div>
   </div>
 </article>
+

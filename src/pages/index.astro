@@ -23,6 +23,8 @@ const currentPage = 1;
 const startIndex = 0;
 const endIndex = ITEMS_PER_PAGE;
 const paginatedBusinesses = businesses.slice(startIndex, endIndex);
+
+const fromPath = Astro.url.pathname;
 ---
 
 <Layout title={CONTENT.pages.home.title}>
@@ -46,7 +48,7 @@ const paginatedBusinesses = businesses.slice(startIndex, endIndex);
 
     <div class="space-y-6">
       {paginatedBusinesses.map((business) => (
-        <BusinessCard business={business} />
+        <BusinessCard business={business} from={fromPath} />
       ))}
     </div>
 

@@ -60,6 +60,8 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const { businesses, category, categorySlug, currentPage, totalPages, totalBusinesses } = Astro.props;
+
+const fromPath = Astro.url.pathname;
 ---
 
 <Layout title={CONTENT.pages.category.titleTemplate(category)}>
@@ -83,7 +85,7 @@ const { businesses, category, categorySlug, currentPage, totalPages, totalBusine
 
     <div class="space-y-6">
       {businesses.map((business) => (
-        <BusinessCard business={business} />
+        <BusinessCard business={business} from={fromPath} />
       ))}
     </div>
 
