@@ -18,7 +18,7 @@ Visit http://localhost:4321 to see the site.
 
 ## Contributing
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) 
+Read [CONTRIBUTING.md](./CONTRIBUTING.md) 
 
 
 ## Deployment

@@ -7,6 +7,7 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
+    "add-business": "node scripts/add-business.js",
     "deploy": "npm run build && wrangler pages deploy",
     "deploy:preview": "npm run build && wrangler pages deploy --branch=preview",
     "pages:dev": "wrangler pages dev dist",
