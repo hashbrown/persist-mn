@@ -1,10 +1,12 @@
 ---
-name: "HealthFinders Collaborative"
+displayName: "HealthFinders Collaborative"
 category: "Other"
-location: "Faribault, MN"
-address: "1415 Town Square Ln, Faribault, MN 55021, USA"
+address: "1415 Town Square Ln, Faribault"
+city: "Faribault"
+state: "MN"
+postalCode: "55021"
 phone: "(507) 323-8100"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "http://www.healthfindersmn.org/"
+websiteUrl: "http://www.healthfindersmn.org/"
 googleMapsUrl: "https://maps.google.com/?cid=15871817199386497323&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

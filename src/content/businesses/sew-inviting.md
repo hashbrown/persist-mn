@@ -1,10 +1,12 @@
 ---
-name: "Sew InvitingMN"
+displayName: "Sew InvitingMN"
 category: "Retail"
-location: "St. Paul, MN"
-address: "647 Snelling Ave S, St Paul, MN 55116, USA"
+address: "647 Snelling Ave S, St Paul"
+city: "St Paul"
+state: "MN"
+postalCode: "55116"
 phone: "(651) 695-9975"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "https://www.sewinvitingmn.com/"
+websiteUrl: "https://www.sewinvitingmn.com/"
 googleMapsUrl: "https://maps.google.com/?cid=4499453865678266460&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

@@ -19,7 +19,7 @@ export const getStaticPaths = (async () => {
     const categorySlug = getCategorySlug(category);
     const filteredBusinesses = allBusinesses
       .filter(b => b.data.category === category)
-      .sort((a, b) => a.data.name.localeCompare(b.data.name));
+      .sort((a, b) => a.data.displayName.localeCompare(b.data.displayName));
 
     const totalPages = Math.ceil(filteredBusinesses.length / ITEMS_PER_PAGE);
 

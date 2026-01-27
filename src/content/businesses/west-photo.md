@@ -1,10 +1,12 @@
 ---
-name: "West Photo"
+displayName: "West Photo"
 category: "Retail"
-location: "Minneapolis, MN"
-address: "21 University Ave NE, Minneapolis, MN 55413, USA"
+address: "21 University Ave NE, Minneapolis"
+city: "Minneapolis"
+state: "MN"
+postalCode: "55413"
 phone: "(612) 379-2321"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "http://westphoto.com/"
+websiteUrl: "http://westphoto.com/"
 googleMapsUrl: "https://maps.google.com/?cid=14280380240265640213&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

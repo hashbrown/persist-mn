@@ -1,10 +1,12 @@
 ---
-name: "Bauhaus Brew Labs"
+displayName: "Bauhaus Brew Labs"
 category: "Food/Drink"
-location: "Minneapolis, MN"
-address: "1315 Tyler St NE, Minneapolis, MN 55413, USA"
+address: "1315 Tyler St NE, Minneapolis"
+city: "Minneapolis"
+state: "MN"
+postalCode: "55413"
 phone: "(612) 276-6911"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "http://bauhausbrewlabs.com/"
+websiteUrl: "http://bauhausbrewlabs.com/"
 googleMapsUrl: "https://maps.google.com/?cid=8639321302015586491&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

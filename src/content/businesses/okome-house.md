@@ -1,10 +1,12 @@
 ---
-name: "Okome House"
+displayName: "Okome House"
 category: "Food/Drink"
-location: "Minneapolis, MN"
-address: "4457 42nd Ave S, Minneapolis, MN 55406, USA"
+address: "4457 42nd Ave S, Minneapolis"
+city: "Minneapolis"
+state: "MN"
+postalCode: "55406"
 phone: "(612) 354-2423"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "http://okome.house/"
+websiteUrl: "http://okome.house/"
 googleMapsUrl: "https://maps.google.com/?cid=17118847253591185168&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

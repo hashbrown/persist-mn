@@ -1,8 +1,10 @@
 ---
-name: "Bymore Supermercado"
+displayName: "Bymore Supermercado"
 category: "Food/Drink"
-location: "St. Paul, MN"
-address: "857 Payne Ave, St Paul, MN 55130, USA"
+address: "857 Payne Ave, St Paul"
+city: "St Paul"
+state: "MN"
+postalCode: "55130"
 phone: "(651) 793-7196"
 description: "Supporting those affected by the ICE incursion in MN."
 googleMapsUrl: "https://maps.google.com/?cid=5217778865444613900&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"

@@ -1,10 +1,12 @@
 ---
-name: "Francis Burger Joint"
+displayName: "Francis Burger Joint"
 category: "Food/Drink"
-location: "Minneapolis, MN"
-address: "2422 Central Ave NE, Minneapolis, MN 55418, USA"
+address: "2422 Central Ave NE, Minneapolis"
+city: "Minneapolis"
+state: "MN"
+postalCode: "55418"
 phone: "(612) 208-6870"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "https://www.francisburgerjoint.com/"
+websiteUrl: "https://www.francisburgerjoint.com/"
 googleMapsUrl: "https://maps.google.com/?cid=720078737016989823&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

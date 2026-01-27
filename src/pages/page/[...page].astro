@@ -12,7 +12,7 @@ import { CONTENT } from '../../utils/content';
 export const getStaticPaths = (async () => {
   const allBusinesses = await getCollection('businesses');
   const businesses = allBusinesses.sort((a, b) =>
-    a.data.name.localeCompare(b.data.name)
+    a.data.displayName.localeCompare(b.data.displayName)
   );
 
   const totalPages = Math.ceil(businesses.length / ITEMS_PER_PAGE);

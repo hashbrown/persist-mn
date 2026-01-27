@@ -1,10 +1,12 @@
 ---
-name: "Krown Bakery & Eatery"
+displayName: "Krown Bakery & Eatery"
 category: "Food/Drink"
-location: "Anoka, MN"
-address: "530 W Main St #7, Anoka, MN 55303, USA"
+address: "530 W Main St #7, Anoka"
+city: "Anoka"
+state: "MN"
+postalCode: "55303"
 phone: "(763) 427-0506"
 description: "Supporting those affected by the ICE incursion in MN."
-website: "http://krownbakeryandeatery.com/"
+websiteUrl: "http://krownbakeryandeatery.com/"
 googleMapsUrl: "https://maps.google.com/?cid=6454699961039333279&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---
