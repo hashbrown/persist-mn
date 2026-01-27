@@ -1,0 +1,40 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import CategoryFilter from '../../components/CategoryFilter.astro';
+import BusinessCard from '../../components/BusinessCard.astro';
+import { getCategorySlug } from '../../utils/categories';
+
+export const getStaticPaths = (async () => {
+  const businesses = await getCollection('businesses');
+
+  return businesses.map((business) => ({
+    params: { slug: business.slug },
+    props: { business },
+  }));
+}) satisfies GetStaticPaths;
+
+const { business } = Astro.props;
+const categorySlug = getCategorySlug(business.data.category);
+---
+
+<Layout title={`${business.data.displayName} - Persist MN`}>
+  <Header searchCategorySlug={categorySlug} />
+  <CategoryFilter currentCategory={categorySlug} />
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="mb-6">
+      <a
+        href={`/category/${categorySlug}`}
+        class="text-sm font-medium text-blue-600 hover:text-blue-700"
+      >
+        ← Back to {business.data.category}
+      </a>
+    </div>
+
+    <BusinessCard business={business} />
+  </main>
+</Layout>
+

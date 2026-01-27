@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://persist-mn.pages.dev',
+  site: 'https://persistmn.info',
   output: 'static',
   integrations: [tailwind()],
   image: {
