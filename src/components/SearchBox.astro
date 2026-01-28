@@ -1,0 +1,370 @@
+---
+interface Props {
+  categorySlug?: string;
+  id?: string;
+}
+
+const { categorySlug, id = 'site-search' } = Astro.props;
+---
+
+<div
+  class="relative w-full"
+  data-search-root
+  data-search-category={categorySlug ?? ''}
+>
+  <label class="sr-only" for={`${id}-input`}>Search businesses</label>
+  <input
+    id={`${id}-input`}
+    type="search"
+    inputmode="search"
+    autocomplete="off"
+    placeholder="Search businesses (name, city)"
+    role="combobox"
+    aria-autocomplete="list"
+    aria-expanded="false"
+    aria-controls={`${id}-listbox`}
+    aria-activedescendant=""
+    class="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/30"
+  />
+
+  <div
+    data-search-panel
+    class="absolute left-0 right-0 z-30 mt-2 hidden overflow-hidden rounded-md border border-gray-200 bg-white shadow-lg"
+  >
+    <ul
+      id={`${id}-listbox`}
+      data-search-results
+      role="listbox"
+      class="max-h-80 overflow-auto"
+    ></ul>
+  </div>
+</div>
+
+<script>
+  import Fuse from 'fuse.js/basic'
+
+  const MAX_RESULTS = 10
+  const MIN_CHARS = 2
+  const DEBOUNCE_MS = 200
+
+  type SearchRecord = {
+    id: string
+    slug: string
+    displayName: string
+    city?: string
+    state?: string
+    category: string
+    categorySlug: string
+    description: string
+  }
+
+  type SearchCache = {
+    indexPromise: Promise<SearchRecord[]> | null
+    records: SearchRecord[] | null
+    fuseByCategory: Map<string, Fuse<SearchRecord>>
+  }
+
+  type FuseResult = { item: SearchRecord }
+  type ResultLinkEl = HTMLAnchorElement & { dataset: { resultIndex?: string } }
+
+  function debounce<T extends (...args: any[]) => void>(
+    fn: T,
+    ms: number
+  ): (...args: Parameters<T>) => void {
+    let t: number | undefined
+    return (...args: Parameters<T>) => {
+      if (t !== undefined) window.clearTimeout(t)
+      t = window.setTimeout(() => fn(...args), ms)
+    }
+  }
+
+  function getCache(): SearchCache {
+    const key = '__persistmnSearchCache' as const
+    const w = window as unknown as Record<string, unknown>
+    if (!w[key]) {
+      w[key] = {
+        indexPromise: null,
+        records: null,
+        fuseByCategory: new Map<string, Fuse<SearchRecord>>(),
+      } satisfies SearchCache
+    }
+    return w[key] as SearchCache
+  }
+
+  async function loadRecords(): Promise<SearchRecord[]> {
+    const cache = getCache()
+    if (cache.records) return cache.records
+
+    if (!cache.indexPromise) {
+      cache.indexPromise = fetch('/search-index.json', { credentials: 'same-origin' }).then(
+        async (res) => {
+          if (!res.ok) throw new Error(`Failed to load search index: ${res.status}`)
+          return (await res.json()) as SearchRecord[]
+        }
+      )
+    }
+
+    cache.records = await cache.indexPromise
+    return cache.records
+  }
+
+  function getFuseForCategory(records: SearchRecord[], categorySlug?: string): Fuse<SearchRecord> {
+    const cache = getCache()
+    const key = categorySlug || '*'
+    const existing = cache.fuseByCategory.get(key)
+    if (existing) return existing
+
+    const dataset = categorySlug
+      ? records.filter((r: SearchRecord) => r.categorySlug === categorySlug)
+      : records
+
+    const fuse = new Fuse<SearchRecord>(dataset, {
+      includeScore: true,
+      ignoreLocation: true,
+      threshold: 0.3,
+      minMatchCharLength: MIN_CHARS,
+      keys: [
+        { name: 'displayName', weight: 0.6 },
+        { name: 'city', weight: 0.25 },
+        { name: 'description', weight: 0.15 },
+      ],
+    })
+
+    cache.fuseByCategory.set(key, fuse)
+    return fuse
+  }
+
+  function openPanel(panelEl: HTMLElement, inputEl?: HTMLInputElement) {
+    panelEl.classList.remove('hidden')
+    if (inputEl) inputEl.setAttribute('aria-expanded', 'true')
+  }
+
+  function closePanel(panelEl: HTMLElement, inputEl?: HTMLInputElement) {
+    panelEl.classList.add('hidden')
+    if (inputEl) inputEl.setAttribute('aria-expanded', 'false')
+    if (inputEl) inputEl.setAttribute('aria-activedescendant', '')
+  }
+
+  function setResults(resultsEl: HTMLElement, itemsHtml: string) {
+    resultsEl.innerHTML = itemsHtml
+  }
+
+  function escapeHtml(s: unknown): string {
+    return String(s)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;')
+  }
+
+  function renderMessage(resultsEl: HTMLElement, message: string) {
+    setResults(
+      resultsEl,
+      `<li class="px-3 py-2 text-sm text-gray-500">${escapeHtml(message)}</li>`
+    )
+  }
+
+  function renderResults(resultsEl: HTMLElement, results: FuseResult[]) {
+    if (!results.length) {
+      renderMessage(resultsEl, 'No matches')
+      return
+    }
+
+    const html = results
+      .slice(0, MAX_RESULTS)
+      .map(({ item }, idx) => {
+        const name = escapeHtml(item.displayName)
+        const cityState = escapeHtml(
+          [item.city, item.state].filter(Boolean).join(', ')
+        )
+        const category = escapeHtml(item.category)
+        const href = `/business/${item.slug}`
+        const optionId = `${resultsEl.id}-option-${idx}`
+
+        return `
+          <li role="presentation">
+            <a
+              id="${optionId}"
+              role="option"
+              aria-selected="false"
+              data-result-index="${idx}"
+              class="block px-3 py-2 hover:bg-blue-50 focus:bg-blue-50 focus:outline-none"
+              href="${href}"
+            >
+              <div class="flex items-start justify-between gap-3">
+                <div class="min-w-0">
+                  <div class="truncate text-sm font-medium text-gray-900">${name}</div>
+                  <div class="truncate text-xs text-gray-600">${cityState}</div>
+                </div>
+                <span class="shrink-0 rounded-full bg-blue-100 px-2 py-0.5 text-[11px] font-medium text-blue-800">
+                  ${category}
+                </span>
+              </div>
+            </a>
+          </li>
+        `
+      })
+      .join('')
+
+    setResults(resultsEl, html)
+  }
+
+  function getResultLinks(resultsEl: HTMLElement): ResultLinkEl[] {
+    return Array.from(resultsEl.querySelectorAll('a[data-result-index]')) as ResultLinkEl[]
+  }
+
+  function setActiveResult(
+    input: HTMLInputElement,
+    resultsEl: HTMLElement,
+    activeIndex: number
+  ) {
+    const links = getResultLinks(resultsEl)
+    links.forEach((link) => {
+      const idx = Number(link.dataset.resultIndex ?? '-1')
+      const isActive = idx === activeIndex
+      link.setAttribute('aria-selected', isActive ? 'true' : 'false')
+      link.classList.toggle('bg-blue-50', isActive)
+    })
+
+    if (activeIndex >= 0 && activeIndex < links.length) {
+      input.setAttribute('aria-activedescendant', links[activeIndex]?.id ?? '')
+      // Ensure visible when navigating via keyboard
+      links[activeIndex]?.scrollIntoView({ block: 'nearest' })
+    } else {
+      input.setAttribute('aria-activedescendant', '')
+    }
+  }
+
+  function navigateToBusiness(href: string) {
+    const from = window.location.pathname
+    const sep = href.includes('?') ? '&' : '?'
+    window.location.assign(`${href}${sep}from=${encodeURIComponent(from)}`)
+  }
+
+  function initSearchRoot(root: Element) {
+    const categorySlug = root.getAttribute('data-search-category') || ''
+    const input = root.querySelector('input[type="search"]') as HTMLInputElement | null
+    const panel = root.querySelector('[data-search-panel]') as HTMLElement | null
+    const resultsEl = root.querySelector('[data-search-results]') as HTMLUListElement | null
+
+    if (!input || !panel || !resultsEl) return
+
+    let lastQuery = ''
+    let activeIndex = -1
+
+    const doSearch = debounce(async () => {
+      const q = input.value.trim()
+      lastQuery = q
+
+      if (q.length < MIN_CHARS) {
+        activeIndex = -1
+        closePanel(panel, input)
+        return
+      }
+
+      openPanel(panel, input)
+      renderMessage(resultsEl, 'Searching…')
+
+      try {
+        const records = await loadRecords()
+        // If the user kept typing while loading, ignore stale run.
+        if (input.value.trim() !== lastQuery) return
+
+        const fuse = getFuseForCategory(records, categorySlug || undefined)
+        const results = fuse.search(q) as unknown as FuseResult[]
+        renderResults(resultsEl, results)
+
+        activeIndex = -1
+        setActiveResult(input, resultsEl, activeIndex)
+      } catch (e) {
+        renderMessage(resultsEl, 'Search unavailable')
+        console.error(e)
+      }
+    }, DEBOUNCE_MS)
+
+    input.addEventListener('input', doSearch)
+    input.addEventListener('focus', () => {
+      // Warm the cache on focus, but don’t force UI open.
+      loadRecords().catch(() => {})
+    })
+    input.addEventListener('keydown', (e: KeyboardEvent) => {
+      const links = getResultLinks(resultsEl)
+      const panelOpen = !panel.classList.contains('hidden')
+
+      if (e.key === 'ArrowDown') {
+        if (!panelOpen && input.value.trim().length >= MIN_CHARS) {
+          openPanel(panel, input)
+        }
+        if (links.length) {
+          e.preventDefault()
+          activeIndex = Math.min(activeIndex + 1, links.length - 1)
+          setActiveResult(input, resultsEl, activeIndex)
+        }
+        return
+      }
+
+      if (e.key === 'ArrowUp') {
+        if (links.length) {
+          e.preventDefault()
+          activeIndex = Math.max(activeIndex - 1, -1)
+          setActiveResult(input, resultsEl, activeIndex)
+        }
+        return
+      }
+
+      if (e.key === 'Enter') {
+        if (panelOpen && activeIndex >= 0 && activeIndex < links.length) {
+          e.preventDefault()
+          const href = links[activeIndex]?.getAttribute('href')
+          if (href) navigateToBusiness(href)
+        }
+        return
+      }
+
+      if (e.key === 'Escape') {
+        if (panelOpen) {
+          e.preventDefault()
+          activeIndex = -1
+          closePanel(panel, input)
+        } else {
+          input.blur()
+        }
+      }
+    })
+
+    resultsEl.addEventListener('mousemove', (e: MouseEvent) => {
+      const target = e.target
+      if (!(target instanceof Element)) return
+      const link = target.closest('a[data-result-index]') as ResultLinkEl | null
+      if (!link) return
+      const idx = Number(link.dataset.resultIndex ?? '-1')
+      if (Number.isFinite(idx) && idx !== activeIndex) {
+        activeIndex = idx
+        setActiveResult(input, resultsEl, activeIndex)
+      }
+    })
+
+    resultsEl.addEventListener('click', (e: MouseEvent) => {
+      const target = e.target
+      if (!(target instanceof Element)) return
+      const link = target.closest('a[href]') as HTMLAnchorElement | null
+      if (!link) return
+      // Preserve origin on normal click.
+      e.preventDefault()
+      navigateToBusiness(link.href)
+    })
+
+    document.addEventListener('click', (e: MouseEvent) => {
+      const target = e.target
+      if (!(target instanceof Node)) return
+      if (!root.contains(target)) {
+        activeIndex = -1
+        closePanel(panel, input)
+      }
+    })
+  }
+
+  document.querySelectorAll('[data-search-root]').forEach((el) => initSearchRoot(el))
+</script>
+

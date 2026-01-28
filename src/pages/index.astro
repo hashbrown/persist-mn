@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import SearchBox from '../components/SearchBox.astro';
 import CategoryFilter from '../components/CategoryFilter.astro';
 import BusinessCard from '../components/BusinessCard.astro';
 import Pagination from '../components/Pagination.astro';
@@ -22,10 +23,17 @@ const currentPage = 1;
 const startIndex = 0;
 const endIndex = ITEMS_PER_PAGE;
 const paginatedBusinesses = businesses.slice(startIndex, endIndex);
+
+const fromPath = Astro.url.pathname;
 ---
 
 <Layout title={CONTENT.pages.home.title}>
   <Header />
+
+  <div class="block md:hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+    <SearchBox id="mobile-search" />
+  </div>
+
   <CategoryFilter />
 
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -40,7 +48,7 @@ const paginatedBusinesses = businesses.slice(startIndex, endIndex);
 
     <div class="space-y-6">
       {paginatedBusinesses.map((business) => (
-        <BusinessCard business={business} />
+        <BusinessCard business={business} from={fromPath} />
       ))}
     </div>
 

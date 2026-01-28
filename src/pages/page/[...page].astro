@@ -3,6 +3,7 @@ import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
+import SearchBox from '../../components/SearchBox.astro';
 import CategoryFilter from '../../components/CategoryFilter.astro';
 import BusinessCard from '../../components/BusinessCard.astro';
 import Pagination from '../../components/Pagination.astro';
@@ -35,10 +36,17 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const { businesses, currentPage, totalPages, totalBusinesses } = Astro.props;
+
+const fromPath = Astro.url.pathname;
 ---
 
 <Layout title={CONTENT.pages.pagination.titleTemplate(currentPage)}>
   <Header />
+
+  <div class="block md:hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+    <SearchBox id="mobile-search" />
+  </div>
+
   <CategoryFilter />
 
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -53,7 +61,7 @@ const { businesses, currentPage, totalPages, totalBusinesses } = Astro.props;
 
     <div class="space-y-6">
       {businesses.map((business) => (
-        <BusinessCard business={business} />
+        <BusinessCard business={business} from={fromPath} />
       ))}
     </div>
 

@@ -1,5 +1,12 @@
 ---
 import { CONTENT } from '../utils/content';
+import SearchBox from './SearchBox.astro';
+
+interface Props {
+  searchCategorySlug?: string;
+}
+
+const { searchCategorySlug } = Astro.props;
 ---
 
 <header class="bg-white shadow-sm border-b border-gray-200">
@@ -21,7 +28,14 @@ import { CONTENT } from '../utils/content';
           </a>
         </nav>
       </div>
-      <p class="text-base text-gray-600">{CONTENT.site.tagline}</p>
+
+      <div class="flex items-center justify-between gap-4">
+        <p class="text-base text-gray-600">{CONTENT.site.tagline}</p>
+
+        <div class="hidden md:block w-72 shrink-0">
+          <SearchBox categorySlug={searchCategorySlug} id="header-search" />
+        </div>
+      </div>
     </div>
   </div>
 </header>
