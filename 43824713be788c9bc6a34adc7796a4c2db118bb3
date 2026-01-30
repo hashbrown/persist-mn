@@ -1,0 +1,25 @@
+src/content/config.ts
+  7ad6233cb0e03fda 18
+scripts/add-business.js
+  7ad6233cb0e03fda 92,199,259-263,285
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.40",
+  "base_commit_sha": "43824713be788c9bc6a34adc7796a4c2db118bb3",
+  "prompts": {
+    "7ad6233cb0e03fda": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "400ac3e1-cbf7-42a8-b811-cd8167528a82",
+        "model": "gpt-5.2"
+      },
+      "human_author": "Brad Armstrong <hashbrown1+git@gmail.com>",
+      "messages": [],
+      "total_additions": 9,
+      "total_deletions": 0,
+      "accepted_lines": 9,
+      "overriden_lines": 0
+    }
+  }
+}
