@@ -6,7 +6,7 @@ city: "Minnetonka"
 state: "MN"
 postalCode: "55345"
 phone: "(952) 303-6081"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.delsurempanadas.com/"
 googleMapsUrl: "https://maps.google.com/?cid=10337069694323142472&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

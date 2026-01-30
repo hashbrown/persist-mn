@@ -6,7 +6,7 @@ city: "Apple Valley"
 state: "MN"
 postalCode: "55124"
 phone: "(952) 800-4540"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://pizzakarma.com/pizzakarma-applevalley?utm_source=google"
 googleMapsUrl: "https://maps.google.com/?cid=2631569939322710149&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

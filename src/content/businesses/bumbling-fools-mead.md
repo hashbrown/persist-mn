@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55413"
 phone: "(763) 464-4052"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://bumblingfools.com/"
 googleMapsUrl: "https://maps.google.com/?cid=12840562172575308039&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

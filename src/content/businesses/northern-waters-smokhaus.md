@@ -6,7 +6,7 @@ city: "Duluth"
 state: "MN"
 postalCode: "55802"
 phone: "(218) 724-7307"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://northernwaterssmokehaus.com/"
 googleMapsUrl: "https://maps.google.com/?cid=9648097171695616561&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

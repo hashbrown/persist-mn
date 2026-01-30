@@ -6,7 +6,7 @@ city: "Richfield"
 state: "MN"
 postalCode: "55423"
 phone: "(612) 345-5243"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://lavaquitagrocery.com/"
 googleMapsUrl: "https://maps.google.com/?cid=4293316267738443014&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

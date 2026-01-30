@@ -6,6 +6,6 @@ city: "White Bear Lake"
 state: "MN"
 postalCode: "55110"
 phone: "(651) 426-0918"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 googleMapsUrl: "https://maps.google.com/?cid=2225252601669559500&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

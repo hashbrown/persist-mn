@@ -75,7 +75,7 @@ A single build-time JSON index is generated containing a minimal subset of busin
 - `displayName`
 - `city`, `state`
 - `category`, `categorySlug`
-- `description` (included for relevance, not intended as full-text search)
+- `justification` (included for relevance, not intended as full-text search)
 
 ### Index generation
 
@@ -91,7 +91,7 @@ A single build-time JSON index is generated containing a minimal subset of busin
 - Uses the Fuse.js **Basic** build (standard fuzzy search only) via:
   - `import Fuse from 'fuse.js/basic'`
 - Search configuration (high level):
-  - Weighted keys: `displayName` (highest), `city`, `description` (lowest)
+  - Weighted keys: `displayName` (highest), `city`, `justification` (lowest)
   - `threshold` tuned for moderate fuzziness
   - `ignoreLocation: true` for more intuitive matching across short fields
 

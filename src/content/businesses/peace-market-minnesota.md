@@ -6,7 +6,7 @@ city: "Hilltop"
 state: "MN"
 postalCode: "55421"
 phone: "(763) 205-6655"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://peacemarketonline.com/"
 googleMapsUrl: "https://maps.google.com/?cid=18263889344488823766&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

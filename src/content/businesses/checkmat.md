@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55403"
 phone: "(612) 345-4147"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://www.instagram.com/dangerroom612/"
 googleMapsUrl: "https://maps.google.com/?cid=9471184846601328451&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

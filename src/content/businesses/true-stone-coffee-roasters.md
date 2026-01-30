@@ -6,7 +6,7 @@ city: "St Paul"
 state: "MN"
 postalCode: "55104"
 phone: "(651) 645-1729"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://www.truestonecoffee.com/"
 googleMapsUrl: "https://maps.google.com/?cid=14312545851340283609&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

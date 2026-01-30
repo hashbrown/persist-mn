@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55401"
 phone: "(612) 345-7490"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://online.barre3.com/studio-locations/minneapolis"
 googleMapsUrl: "https://maps.google.com/?cid=15602774153223933764&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

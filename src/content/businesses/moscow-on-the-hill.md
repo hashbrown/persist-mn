@@ -6,7 +6,7 @@ city: "St Paul"
 state: "MN"
 postalCode: "55102"
 phone: "(651) 291-1236"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.moscowonthehill.com/"
 googleMapsUrl: "https://maps.google.com/?cid=9299476209408553103&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

@@ -6,7 +6,7 @@ city: "Circle Pines"
 state: "MN"
 postalCode: "55014"
 phone: "(763) 600-6647"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://www.curiouscrowcompany.com/"
 googleMapsUrl: "https://maps.google.com/?cid=17640910368353026076&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

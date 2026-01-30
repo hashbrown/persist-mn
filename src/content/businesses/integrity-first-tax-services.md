@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55408"
 phone: "(612) 402-0836"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://integrity1sttax.com/"
 googleMapsUrl: "https://maps.google.com/?cid=6372831958979042797&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

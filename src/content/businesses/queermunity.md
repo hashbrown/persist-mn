@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55408"
 phone: "(612) 208-7082"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://queermunitymn.com/"
 googleMapsUrl: "https://maps.google.com/?cid=2633935638132250481&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

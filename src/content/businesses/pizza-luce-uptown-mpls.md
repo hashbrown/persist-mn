@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55408"
 phone: "(612) 827-5978"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://www.pizzaluce.com/locations/uptown"
 googleMapsUrl: "https://maps.google.com/?cid=1764473188212950133&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

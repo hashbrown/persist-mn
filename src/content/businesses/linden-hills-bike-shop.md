@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55410"
 phone: "(612) 886-3625"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.lindenhillsbikeshop.com/"
 googleMapsUrl: "https://maps.google.com/?cid=13134539365758721452&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

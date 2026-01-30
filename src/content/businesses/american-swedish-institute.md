@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55407"
 phone: "(612) 871-4907"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.asimn.org/"
 googleMapsUrl: "https://maps.google.com/?cid=5335361704089780480&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

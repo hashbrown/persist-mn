@@ -6,7 +6,7 @@ city: "New Hope"
 state: "MN"
 postalCode: "55428"
 phone: "(763) 208-1265"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://www.quetacomn.com/"
 googleMapsUrl: "https://maps.google.com/?cid=9476324397167762106&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

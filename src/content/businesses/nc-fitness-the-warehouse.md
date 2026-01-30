@@ -6,7 +6,7 @@ city: "Rosemount"
 state: "MN"
 postalCode: "55068"
 phone: "(651) 983-8368"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://nickiecarriganfitness.com/"
 googleMapsUrl: "https://maps.google.com/?cid=3056088992317440512&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

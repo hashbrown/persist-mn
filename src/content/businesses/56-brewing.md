@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55418"
 phone: "(612) 404-0056"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.56brewing.com/"
 googleMapsUrl: "https://maps.google.com/?cid=11053598008313899396&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

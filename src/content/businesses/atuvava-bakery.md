@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55406"
 phone: "(612) 592-4202"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.atuvava.com/"
 googleMapsUrl: "https://maps.google.com/?cid=16485160131089737004&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

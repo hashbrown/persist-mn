@@ -6,7 +6,7 @@ city: "St Paul"
 state: "MN"
 postalCode: "55101"
 phone: "(651) 726-2457"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://parksandtrails.org/"
 googleMapsUrl: "https://maps.google.com/?cid=14728916359053274565&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

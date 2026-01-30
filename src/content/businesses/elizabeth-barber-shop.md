@@ -6,7 +6,7 @@ city: "St Paul"
 state: "MN"
 postalCode: "55104"
 phone: "(651) 797-2503"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.elizabethsbarbershop.com/"
 googleMapsUrl: "https://maps.google.com/?cid=5234196217574224290&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

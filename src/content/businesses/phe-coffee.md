@@ -6,7 +6,7 @@ city: "St Paul"
 state: "MN"
 postalCode: "55101"
 phone: "(651) 788-9573"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://www.phecoffee.house/"
 googleMapsUrl: "https://maps.google.com/?cid=7993898271549435501&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

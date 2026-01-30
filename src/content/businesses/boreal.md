@@ -6,7 +6,7 @@ city: "St Paul"
 state: "MN"
 postalCode: "55108"
 phone: "(651) 560-9900"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://boreal.life/"
 googleMapsUrl: "https://maps.google.com/?cid=2603194906294839031&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

@@ -6,7 +6,7 @@ city: "Duluth"
 state: "MN"
 postalCode: "55805"
 phone: "(218) 724-8619"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://www.3rdstreetbakery.com/"
 googleMapsUrl: "https://maps.google.com/?cid=10459931491810884777&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

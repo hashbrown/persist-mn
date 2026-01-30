@@ -6,7 +6,7 @@ city: "St Paul"
 state: "MN"
 postalCode: "55102"
 phone: "(651) 600-3472"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.wildflyercoffee.com/"
 googleMapsUrl: "https://maps.google.com/?cid=3520576697497607766&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

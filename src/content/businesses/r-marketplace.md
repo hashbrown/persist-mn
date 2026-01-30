@@ -6,7 +6,7 @@ city: "Anoka"
 state: "MN"
 postalCode: "55303"
 phone: "(763) 337-0581"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://r-marketplace.square.site/"
 googleMapsUrl: "https://maps.google.com/?cid=13640100398445978829&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

@@ -6,7 +6,7 @@ city: "Fridley"
 state: "MN"
 postalCode: "55432"
 phone: "(833) 278-1523"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.theclappingmonkey.com/"
 googleMapsUrl: "https://maps.google.com/?cid=7852426045194142991&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

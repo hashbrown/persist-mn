@@ -6,7 +6,7 @@ city: "Minnetonka"
 state: "MN"
 postalCode: "55345"
 phone: "(952) 473-0292"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.lakewinds.coop/"
 googleMapsUrl: "https://maps.google.com/?cid=12984601185300931705&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

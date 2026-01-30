@@ -6,7 +6,7 @@ city: "St Paul"
 state: "MN"
 postalCode: "55105"
 phone: "(651) 330-9648"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.estellestp.com/"
 googleMapsUrl: "https://maps.google.com/?cid=14865972315115772694&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

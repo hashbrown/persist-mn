@@ -6,7 +6,7 @@ city: "Bloomington"
 state: "MN"
 postalCode: "55425"
 phone: "(651) 528-7543"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://www.backstory.coffee/"
 googleMapsUrl: "https://maps.google.com/?cid=11757929816025389595&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

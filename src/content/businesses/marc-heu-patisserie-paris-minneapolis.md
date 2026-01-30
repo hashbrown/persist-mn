@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55410"
 phone: "(763) 401-7930"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://marcheuparis.com/"
 googleMapsUrl: "https://maps.google.com/?cid=2791643165933162803&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

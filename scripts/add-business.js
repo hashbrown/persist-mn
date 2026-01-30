@@ -8,7 +8,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
-const DEFAULT_DESCRIPTION = process.env.COMMUNITY_DESCRIPTION;
+const DEFAULT_JUSTIFICATION = process.env.COMMUNITY_JUSTIFICATION;
 const OUTPUT_DIR = './src/content/businesses';
 
 // Keep this map aligned with scripts/import-businesses.js
@@ -89,6 +89,7 @@ async function searchPlaces(textQuery) {
     'places.shortFormattedAddress',
     'places.nationalPhoneNumber',
     'places.location',
+    'places.editorialSummary',
     'places.googleMapsUri',
     'places.websiteUri',
     'places.photos',
@@ -157,16 +158,16 @@ async function promptForSelection(places) {
   }
 }
 
-async function resolveDescription(descriptionArg) {
-  if (descriptionArg && descriptionArg.trim()) return descriptionArg.trim();
-  if (DEFAULT_DESCRIPTION && DEFAULT_DESCRIPTION.trim()) return DEFAULT_DESCRIPTION.trim();
+async function resolvejustification(justificationArg) {
+  if (justificationArg && justificationArg.trim()) return justificationArg.trim();
+  if (DEFAULT_JUSTIFICATION && DEFAULT_JUSTIFICATION.trim()) return DEFAULT_JUSTIFICATION.trim();
 
   const rl = readline.createInterface({ input, output });
   try {
     while (true) {
-      const answer = (await rl.question('Description (required): ')).trim();
+      const answer = (await rl.question('justification (required): ')).trim();
       if (answer) return answer;
-      output.write('Description is required.\n');
+      output.write('justification is required.\n');
     }
   } finally {
     rl.close();
@@ -195,7 +196,8 @@ function buildFrontmatter(data) {
   push('postalCode', data.postalCode);
   push('address', data.address);
   push('phone', data.phone);
-  push('description', data.description);
+  push('summary', data.summary);
+  push('justification', data.justification);
 
   push('websiteUrl', data.websiteUrl);
   push('websiteImageUrl', data.websiteImageUrl);
@@ -222,12 +224,12 @@ async function main() {
   }
 
   const args = process.argv.slice(2);
-  const descriptionArg = getArgValue(args, '--description');
+  const justificationArg = getArgValue(args, '--justification');
   const force = args.includes('--force');
 
-  const query = args.find(a => !a.startsWith('--') && a !== descriptionArg);
+  const query = args.find(a => !a.startsWith('--') && a !== justificationArg);
   if (!query) {
-    console.error('Usage: node scripts/add-business.js "<search text>" [--description "..."] [--force]');
+    console.error('Usage: node scripts/add-business.js "<search text>" [--justification "..."] [--force]');
     process.exit(1);
   }
 
@@ -251,8 +253,13 @@ async function main() {
     process.exit(1);
   }
 
-  const description = await resolveDescription(descriptionArg);
+  const justification = await resolvejustification(justificationArg);
   const category = mapCategory({ primaryType: selected.primaryType, types: selected.types });
+
+  const summary =
+    (typeof selected.editorialSummary?.text === 'string' && selected.editorialSummary.text.trim())
+      || (typeof selected.editorialSummary?.overview === 'string' && selected.editorialSummary.overview.trim())
+      || undefined;
 
   let photoUri;
   const photoName = selected.photos?.[0]?.name;
@@ -275,7 +282,8 @@ async function main() {
     location: selected.location,
     address: selected.shortFormattedAddress,
     phone: selected.nationalPhoneNumber,
-    description,
+    summary,
+    justification,
     websiteUrl: selected.websiteUri,
     websiteImageUrl: photoUri,
     googleMapsUrl: selected.googleMapsUri,

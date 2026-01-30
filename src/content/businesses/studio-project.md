@@ -6,6 +6,6 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55401"
 phone: "(612) 623-8000"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 googleMapsUrl: "https://maps.google.com/?cid=14977520430277850431&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

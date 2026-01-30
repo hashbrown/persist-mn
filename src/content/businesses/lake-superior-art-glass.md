@@ -6,7 +6,7 @@ city: "Duluth"
 state: "MN"
 postalCode: "55802"
 phone: "(218) 464-1799"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.lakesuperiorartglass.com/"
 googleMapsUrl: "https://maps.google.com/?cid=1385741181357311525&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

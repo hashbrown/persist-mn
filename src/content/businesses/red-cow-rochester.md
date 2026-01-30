@@ -6,7 +6,7 @@ city: "Rochester"
 state: "MN"
 postalCode: "55902"
 phone: "(507) 361-7910"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://redcowmn.com/rochester/"
 googleMapsUrl: "https://maps.google.com/?cid=6917242507555806837&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

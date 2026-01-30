@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55406"
 phone: "(612) 216-1054"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://www.nicetimemarket.com/"
 googleMapsUrl: "https://maps.google.com/?cid=13305454288452743599&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

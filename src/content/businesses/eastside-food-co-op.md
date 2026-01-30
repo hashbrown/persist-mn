@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55418"
 phone: "(612) 788-0950"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.eastsidefood.coop/"
 googleMapsUrl: "https://maps.google.com/?cid=6216195305011814953&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

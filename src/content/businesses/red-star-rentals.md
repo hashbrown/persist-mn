@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55430"
 phone: "(612) 627-9080"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://www.redstarpictures.com/locations/minneapolis/"
 googleMapsUrl: "https://maps.google.com/?cid=17822966400306403776&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

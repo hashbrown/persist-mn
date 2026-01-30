@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55406"
 phone: "(612) 379-4455"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.steadytattoo.com/"
 googleMapsUrl: "https://maps.google.com/?cid=3483496520960499467&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

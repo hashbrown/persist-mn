@@ -6,7 +6,7 @@ city: "Osseo"
 state: "MN"
 postalCode: "55369"
 phone: "(763) 205-6769"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.annabellehouse.com/"
 googleMapsUrl: "https://maps.google.com/?cid=7045552148285878382&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

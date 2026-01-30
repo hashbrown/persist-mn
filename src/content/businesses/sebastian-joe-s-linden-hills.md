@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55410"
 phone: "(612) 926-7916"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://sebastianjoesicecream.com/"
 googleMapsUrl: "https://maps.google.com/?cid=16583611653495474897&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

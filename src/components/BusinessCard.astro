@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { business, from } = Astro.props;
-const { displayName, category, address, city, state, phone, description, websiteUrl, googleMapsUrl } = business.data;
+const { displayName, category, address, city, state, phone, justification, websiteUrl, googleMapsUrl } = business.data;
 const displayLocation = address || (city && state ? `${city}, ${state}` : undefined);
 const detailHref = from ? `/business/${business.slug}?from=${encodeURIComponent(from)}` : `/business/${business.slug}`;
 
@@ -35,7 +35,7 @@ const phoneLink = phone?.replace(/\D/g, '');
   -->
   <div class="relative z-20 p-4 pointer-events-none">
     <div class="flex items-start justify-between gap-4">
-      <!-- Left side: Name, Location, Phone, Description -->
+      <!-- Left side: Name, Location, Phone, justification -->
       <div class="flex-1 min-w-0">
         <h2 class="text-lg font-bold text-gray-900 mb-1">
           {displayName}
@@ -72,9 +72,9 @@ const phoneLink = phone?.replace(/\D/g, '');
           </p>
         )}
 
-        <!-- Description -->
+        <!-- justification -->
         <p class="text-gray-700 text-sm mt-2">
-          {description}
+          {justification}
         </p>
       </div>
 

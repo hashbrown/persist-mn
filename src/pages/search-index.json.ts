@@ -10,7 +10,7 @@ export type SearchIndexRecord = {
   state?: string;
   category: string;
   categorySlug: string;
-  description: string;
+  justification: string;
 };
 
 export const GET: APIRoute = async () => {
@@ -27,7 +27,7 @@ export const GET: APIRoute = async () => {
       state: entry.data.state,
       category: entry.data.category,
       categorySlug: getCategorySlug(entry.data.category),
-      description: entry.data.description,
+      justification: entry.data.justification,
     }));
 
   return new Response(JSON.stringify(records), {

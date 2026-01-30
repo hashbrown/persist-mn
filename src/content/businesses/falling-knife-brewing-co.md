@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55413"
 phone: "(612) 354-7101"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.fallingknife.beer/"
 googleMapsUrl: "https://maps.google.com/?cid=9375180994587451090&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

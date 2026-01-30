@@ -6,7 +6,7 @@ city: "Savage"
 state: "MN"
 postalCode: "55378"
 phone: "(952) 855-4665"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.whiskeyinferno.com/"
 googleMapsUrl: "https://maps.google.com/?cid=14579009146949030853&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

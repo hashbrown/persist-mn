@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55405"
 phone: "(612) 872-0911"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://www.facebook.com/caffettocafe/"
 googleMapsUrl: "https://maps.google.com/?cid=2047947530189720097&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

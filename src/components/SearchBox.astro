@@ -55,7 +55,7 @@ const { categorySlug, id = 'site-search' } = Astro.props;
     state?: string
     category: string
     categorySlug: string
-    description: string
+    justification: string
   }
 
   type SearchCache = {
@@ -126,7 +126,7 @@ const { categorySlug, id = 'site-search' } = Astro.props;
       keys: [
         { name: 'displayName', weight: 0.6 },
         { name: 'city', weight: 0.25 },
-        { name: 'description', weight: 0.15 },
+        { name: 'justification', weight: 0.15 },
       ],
     })
 

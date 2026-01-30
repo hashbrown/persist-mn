@@ -6,7 +6,7 @@ city: "St Paul"
 state: "MN"
 postalCode: "55102"
 phone: "(651) 292-9562"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://www.ergofloral.com/"
 googleMapsUrl: "https://maps.google.com/?cid=17550899708270344206&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

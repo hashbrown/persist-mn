@@ -6,7 +6,7 @@ city: "Monticello"
 state: "MN"
 postalCode: "55362"
 phone: "(763) 314-0454"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://www.panchovillasgrill.com/"
 googleMapsUrl: "https://maps.google.com/?cid=7883843789827604440&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

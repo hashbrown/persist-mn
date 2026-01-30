@@ -6,7 +6,7 @@ city: "St Louis Park"
 state: "MN"
 postalCode: "55416"
 phone: "(612) 221-2066"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.holdthewheat.com/"
 googleMapsUrl: "https://maps.google.com/?cid=3608720494558488922&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

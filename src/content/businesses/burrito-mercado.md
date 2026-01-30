@@ -6,7 +6,7 @@ city: "St Paul"
 state: "MN"
 postalCode: "55107"
 phone: "(651) 227-2192"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://elburritomercado.com/"
 googleMapsUrl: "https://maps.google.com/?cid=16781498398293935426&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

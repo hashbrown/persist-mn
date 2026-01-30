@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { business } = Astro.props;
-const { displayName, category, address, city, state, phone, description, websiteUrl, googleMapsUrl } = business.data;
+const { displayName, category, address, city, state, phone, justification, websiteUrl, googleMapsUrl } = business.data;
 const displayLocation = address || (city && state ? `${city}, ${state}` : undefined);
 
 // Determine primary CTA
@@ -25,7 +25,7 @@ const phoneLink = phone?.replace(/\D/g, '');
 <article class="bg-white rounded-lg shadow-md overflow-hidden">
   <div class="p-4">
     <div class="flex items-start justify-between gap-4">
-      <!-- Left side: Name, Location, Phone, Description -->
+      <!-- Left side: Name, Location, Phone, justification -->
       <div class="flex-1 min-w-0">
         <h2 class="text-xl font-bold text-gray-900 mb-2">
           {displayName}
@@ -62,9 +62,9 @@ const phoneLink = phone?.replace(/\D/g, '');
           </p>
         )}
 
-        <!-- Description -->
+        <!-- justification -->
         <p class="text-gray-700 text-sm mt-3">
-          {description}
+          {justification}
         </p>
       </div>
 

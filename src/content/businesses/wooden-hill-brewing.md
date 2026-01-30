@@ -6,7 +6,7 @@ city: "Edina"
 state: "MN"
 postalCode: "55439"
 phone: "(952) 960-9663"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://woodenhillbrewing.com/"
 googleMapsUrl: "https://maps.google.com/?cid=350300116524550202&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55415"
 phone: "(612) 338-4214"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://www.eaglempls.com/"
 googleMapsUrl: "https://maps.google.com/?cid=11941824691196316214&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

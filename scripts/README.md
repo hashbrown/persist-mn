@@ -24,7 +24,7 @@ This script imports businesses from a CSV file and creates markdown files in `sr
 4. **Add your API key to `.env`:**
    ```
    GOOGLE_PLACES_API_KEY=your_actual_api_key_here
-   COMMUNITY_DESCRIPTION="Supporting those affected by the ICE incursion in MN."
+   COMMUNITY_JUSTIFICATION="Supporting those affected by the ICE incursion in MN."
    ```
 
 ## Usage

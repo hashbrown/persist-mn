@@ -6,7 +6,7 @@ city: "Eagan"
 state: "MN"
 postalCode: "55122"
 phone: "(651) 447-4770"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://footballpizza.com/locations/"
 googleMapsUrl: "https://maps.google.com/?cid=14871182022839973164&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

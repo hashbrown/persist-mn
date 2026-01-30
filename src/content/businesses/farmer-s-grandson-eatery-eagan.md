@@ -6,7 +6,7 @@ city: "Eagan"
 state: "MN"
 postalCode: "55121"
 phone: "(651) 452-0476"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://farmersgrandson.com/"
 googleMapsUrl: "https://maps.google.com/?cid=16675736639576488137&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

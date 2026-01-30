@@ -5,7 +5,7 @@ address: "2320 Capp Rd, St Paul"
 city: "St Paul"
 state: "MN"
 postalCode: "55114"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://bangbrewing.com/"
 googleMapsUrl: "https://maps.google.com/?cid=15469153993013642445&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

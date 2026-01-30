@@ -6,7 +6,7 @@ city: "St Paul"
 state: "MN"
 postalCode: "55105"
 phone: "(651) 401-1414"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "https://www.rootsroasting.com/home"
 googleMapsUrl: "https://maps.google.com/?cid=4973104821179247227&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---

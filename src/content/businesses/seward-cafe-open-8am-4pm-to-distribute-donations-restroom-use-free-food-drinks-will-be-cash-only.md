@@ -6,7 +6,7 @@ city: "Minneapolis"
 state: "MN"
 postalCode: "55404"
 phone: "(612) 332-1011"
-description: "Supporting those affected by the ICE incursion in MN."
+justification: "Supporting those affected by the ICE incursion in MN."
 websiteUrl: "http://sewardcafe.com/"
 googleMapsUrl: "https://maps.google.com/?cid=6450241343055172330&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
 ---
