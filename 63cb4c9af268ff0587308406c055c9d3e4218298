@@ -1,0 +1,21 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.40",
+  "base_commit_sha": "63cb4c9af268ff0587308406c055c9d3e4218298",
+  "prompts": {
+    "7ad6233cb0e03fda": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "400ac3e1-cbf7-42a8-b811-cd8167528a82",
+        "model": "gpt-5.2"
+      },
+      "human_author": "Brad Armstrong <hashbrown1+git@gmail.com>",
+      "messages": [],
+      "total_additions": 305,
+      "total_deletions": 0,
+      "accepted_lines": 305,
+      "overriden_lines": 0
+    }
+  }
+}
