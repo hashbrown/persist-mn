@@ -1,0 +1,23 @@
+src/components/BusinessCard.astro
+  fbe4e1b23b521c22 38-40,47,51-55,57-75,121-122
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.40",
+  "base_commit_sha": "0778f759965f4c0a32a85b864322fbd8a03debe9",
+  "prompts": {
+    "fbe4e1b23b521c22": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "a119f15e-acd6-4c50-84a0-14784f93c2f1",
+        "model": "gpt-5.2"
+      },
+      "human_author": "Brad Armstrong <hashbrown1+git@gmail.com>",
+      "messages": [],
+      "total_additions": 47,
+      "total_deletions": 29,
+      "accepted_lines": 31,
+      "overriden_lines": 0
+    }
+  }
+}
