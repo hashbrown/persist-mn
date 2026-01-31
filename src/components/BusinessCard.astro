@@ -35,25 +35,44 @@ const phoneLink = phone?.replace(/\D/g, '');
     while allowing specific interactive elements to remain clickable.
   -->
   <div class="relative z-20 p-4 pointer-events-none">
-    <div class="flex items-start justify-between gap-4">
-      <!-- Left side: Name, Location, Phone, justification -->
-      <div class="flex-1 min-w-0 flex items-start gap-4">
+    <div class="grid grid-cols-[auto,1fr] sm:grid-cols-[auto,1fr,auto] items-start gap-4">
+      <!-- Left column: image, and (mobile) Category + CTA under the image -->
+      <div class="flex flex-col items-start gap-2 flex-shrink-0">
         {websiteImageUrl && (
-          <div class="flex-shrink-0">
-            <img
-              src={websiteImageUrl}
-              alt={`Photo of ${displayName}`}
-              loading="lazy"
-              decoding="async"
-              class="w-16 h-16 sm:w-20 sm:h-20 rounded-md object-cover bg-gray-100 ring-1 ring-gray-200"
-            />
-          </div>
+          <img
+            src={websiteImageUrl}
+            alt={`Photo of ${displayName}`}
+            loading="lazy"
+            decoding="async"
+            class="w-20 h-20 sm:w-24 sm:h-24 rounded-md object-cover bg-gray-100 ring-1 ring-gray-200"
+          />
         )}
 
-        <div class="min-w-0 flex-1">
-          <h2 class="text-lg font-bold text-gray-900 mb-1">
-            {displayName}
-          </h2>
+        <!-- Mobile-only actions live under the image -->
+        <div class="sm:hidden flex flex-col items-start gap-2">
+          <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 whitespace-nowrap">
+            {category}
+          </span>
+
+          <a
+            href={primaryLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="pointer-events-auto inline-flex items-center px-3 py-1.5 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+          >
+            {primaryLinkText}
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Middle column: Name, Location, Phone, summary, justification -->
+      <div class="min-w-0">
+        <h2 class="text-lg font-bold text-gray-900 mb-1">
+          {displayName}
+        </h2>
 
         <!-- Location -->
         {displayLocation && (googleMapsUrl ? (
@@ -86,22 +105,21 @@ const phoneLink = phone?.replace(/\D/g, '');
           </p>
         )}
 
-          <!-- business summary -->
-          {summary && (
-            <p class="text-gray-700 text-sm mt-2">
-              {summary}
-            </p>
-          )}
+        <!-- business summary -->
+        {summary && (
+          <p class="text-gray-700 text-sm mt-2">
+            {summary}
+          </p>
+        )}
 
         <!-- justification -->
-          <p class="text-gray-800 text-sm mt-4 font-semibold">
-            {justificationText}
-          </p>
-        </div>
+        <p class="text-gray-800 text-sm mt-4 font-semibold">
+          {justificationText}
+        </p>
       </div>
 
-      <!-- Right side: Category badge and CTA button -->
-      <div class="flex flex-col items-end gap-4 flex-shrink-0">
+      <!-- Right column: (desktop) Category badge and CTA button -->
+      <div class="hidden sm:flex flex-col items-end gap-4 flex-shrink-0">
         <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 whitespace-nowrap">
           {category}
         </span>
