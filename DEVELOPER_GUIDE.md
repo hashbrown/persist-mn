@@ -108,7 +108,7 @@ function getCategorySlug(category: Category): string {
   location: string                // Required: "City, MN"
   address?: string                // Optional: full street address
   phone?: string                  // Optional: formatted phone number
-  description: string             // Required: community support description
+  justification: string             // Required: community support justification
   image?: string                  // Optional: URL to image
   website?: string                // Optional: business website URL
   googleMapsUrl?: string          // Optional: Google Maps URL

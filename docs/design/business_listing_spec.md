@@ -14,7 +14,7 @@ displayName:
 category:
 address:
 phone:
-description: 
+justification: 
 websiteUrl: 
 websiteImageUrl:
 googleMapsUrl:
@@ -52,6 +52,7 @@ This data is used for the business listing:
 "shortFormattedAddress": string
 "location.latitude": decimal
 "location.longitude": decimal
+"editorialSummary": string
 "googleMapsUri": string
 "websiteUri": string   
 "photos[0].name" : string 
@@ -79,10 +80,11 @@ phone: nationalPhoneNumber
 city: postalAddress.locality
 state: postalAddress.administrativeArea
 zipCode: postalAddress.postalCode
-description: (user provided)
+justification: (user provided)
 website: websiteUri
 websiteImageUrl: photoUri
 googleMapsUrl: googleMapsUri
+summary: editorialSummary
 placesName: name
 placesId: id
 primaryType: primaryType

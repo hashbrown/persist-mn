@@ -15,7 +15,12 @@ const businessCollection = defineCollection({
     postalCode: z.string().optional(),
     address: z.string().optional(),
     phone: z.string().optional(),
-    description: z.string(),
+    summary: z.string().optional(),
+    // Allow `justification:` (YAML null) and treat it as "missing"
+    justification: z.preprocess(
+      (v) => (v === null ? undefined : v),
+      z.string().optional()
+    ),
     websiteUrl: z.string().url().optional(),
     websiteImageUrl: z.string().url().optional(),
     googleMapsUrl: z.string().url().optional(),

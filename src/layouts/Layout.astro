@@ -4,17 +4,17 @@ import { CONTENT } from '../utils/content';
 
 interface Props {
   title: string;
-  description?: string;
+  justification?: string;
 }
 
-const { title, description = CONTENT.site.defaultDescription } = Astro.props;
+const { title, justification = CONTENT.site.defaultJustification } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
+    <meta name="justification" content={justification} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />

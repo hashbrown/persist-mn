@@ -18,7 +18,7 @@ This repo includes an interactive script that looks up a business via Google Pla
 2. Run:
 
 ```bash
-npm run add-business -- "Bang Brewing st paul" --description "Short, factual description of how this business supports the community."
+npm run add-business -- "Bang Brewing st paul" --justification "Short, factual justification of how this business supports the community."
 ```
 
 - If **1 result** is returned, it auto-creates the file.
@@ -39,7 +39,7 @@ address: "123 Example St, Minneapolis, MN 55401, USA"
 city: "Minneapolis"
 state: "MN"
 postalCode: "55401"
-description: "Short, factual description of how this business supports the community."
+justification: "Short, factual justification of how this business supports the community."
 websiteUrl: "https://example.com"
 googleMapsUrl: "https://maps.app.goo.gl/..."
 phone: "(612) 555-1234"
@@ -54,9 +54,9 @@ websiteImageUrl: "https://.../photo.jpg"
 
 - `displayName`
 - `category`
-- `description`
+- `justification`
 
-### Links (required rule)
+### Links
 
 At least one of these must be present:
 
@@ -71,10 +71,10 @@ At least one of these must be present:
 - `postalCode`
 - `phone`
 - `location` (lat/long object)
-- `websiteImageUrl` (separate from `image`; typically used when sourced from Places)
+- `websiteImageUrl`
 - `placesId`, `placesName`, `primaryType`, `types` (Places metadata)
 
-## Writing good descriptions (important)
+## Writing good justifications (important)
 
 - **Keep it short**: 1–3 sentences is ideal
 - **Keep it factual**: avoid rumors or personal attacks
@@ -84,7 +84,7 @@ At least one of these must be present:
 ## Common reasons a build fails
 
 - Category isn’t one of the values in `src/utils/categories.ts`
-- Missing one of: `displayName`, `category`, `description`
+- Missing one of: `displayName`, `category`, `justification`
 - Missing both `websiteUrl` and `googleMapsUrl`
 - Invalid URL format in `websiteUrl`, `googleMapsUrl`, or `websiteImageUrl`
 

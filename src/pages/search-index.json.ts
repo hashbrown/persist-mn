@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { getCategorySlug } from '../utils/categories';
+import { CONTENT } from '../utils/content';
 
 export type SearchIndexRecord = {
   id: string;
@@ -10,7 +11,7 @@ export type SearchIndexRecord = {
   state?: string;
   category: string;
   categorySlug: string;
-  description: string;
+  justification: string;
 };
 
 export const GET: APIRoute = async () => {
@@ -27,13 +28,13 @@ export const GET: APIRoute = async () => {
       state: entry.data.state,
       category: entry.data.category,
       categorySlug: getCategorySlug(entry.data.category),
-      description: entry.data.description,
+      justification: entry.data.justification ?? CONTENT.site.defaultJustification,
     }));
 
   return new Response(JSON.stringify(records), {
     headers: {
       'content-type': 'application/json; charset=utf-8',
-      // Static asset; safe to cache aggressively.
+      // Versioned via `?v=...` in the client; safe to cache aggressively.
       'cache-control': 'public, max-age=31536000, immutable',
     },
   });

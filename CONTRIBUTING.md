@@ -18,7 +18,7 @@ This project is intentionally simple: it’s a static site built with Astro, and
 ## Ways to contribute
 
 - **Add or update a business listing** (most common; see `ADDING_A_BUSINESS.md`)
-- **Fix inaccuracies** (location, links, phone, description, category)
+- **Fix inaccuracies** (location, links, phone, justification, category)
 - **Improve the site** (design, accessibility, layout, performance, copy)
 - **Improve documentation** (clarify setup, scripts, and workflows)
 
@@ -26,7 +26,7 @@ This project is intentionally simple: it’s a static site built with Astro, and
 ## Community guidelines (small-community open source)
 
 - **Be kind and constructive.** Assume good intent.
-- **Keep it factual.** Avoid rumors or personal attacks in business descriptions.
+- **Keep it factual.** Avoid rumors or personal attacks in business justifications.
 - **Don’t add sensitive personal data.** Business contact info is OK; private individual info is not.
 - **Prefer public, verifiable sources.** When in doubt, link to a public page rather than summarizing claims.
 
@@ -57,7 +57,7 @@ npm run build
 - [ ] New/updated entries build successfully (`npm run build`)
 - [ ] Category matches one of the values in `src/utils/categories.ts`
 - [ ] At least one of `website` or `googleMapsUrl` is present
-- [ ] Description is factual and not defamatory
+- [ ] justification is factual and not defamatory
 - [ ] Links work and are relevant
 
 ### Checklist (code PRs)
