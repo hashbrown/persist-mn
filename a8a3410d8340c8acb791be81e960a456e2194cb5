@@ -1,0 +1,35 @@
+src/pages/search-index.json.ts
+  7ad6233cb0e03fda 4,31,37
+src/components/BusinessDetailCard.astro
+  7ad6233cb0e03fda 10,12,27-38,78-84,86-87,92
+src/components/BusinessCard.astro
+  7ad6233cb0e03fda 11,14,40-51,53-56,89-94,97-98,100,104
+src/content/config.ts
+  7ad6233cb0e03fda 19-23
+src/layouts/Layout.astro
+  7ad6233cb0e03fda 10
+src/components/SearchBox.astro
+  7ad6233cb0e03fda 8-15,22,74,80-82,103,106-117,125-127
+src/pages/about.astro
+  7ad6233cb0e03fda 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.40",
+  "base_commit_sha": "a8a3410d8340c8acb791be81e960a456e2194cb5",
+  "prompts": {
+    "7ad6233cb0e03fda": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "400ac3e1-cbf7-42a8-b811-cd8167528a82",
+        "model": "gpt-5.2"
+      },
+      "human_author": "Brad Armstrong <hashbrown1+git@gmail.com>",
+      "messages": [],
+      "total_additions": 681,
+      "total_deletions": 147,
+      "accepted_lines": 612,
+      "overriden_lines": 1
+    }
+  }
+}
