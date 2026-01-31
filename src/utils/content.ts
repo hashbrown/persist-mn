@@ -9,7 +9,7 @@ export const CONTENT = {
     motto: 'Persist. Prevail.',
     tagline: 'Supporting Minnesota businesses that support humankind.',
     defaultDescription: 'Supporting Minnesota businesses that support humankind',
-    defaultJustification: 'Closed in support of the ICE Out strike in MN.',
+    defaultJustification: 'Closed in support during the ICE Out strike in MN.',
   },
 
   pages: {
@@ -41,8 +41,8 @@ export const CONTENT = {
   ui: {
     buttons: {
       allBusinesses: 'All Businesses',
-      visitWebsite: 'Visit Website',
-      viewOnMaps: 'View on Maps',
+      visitWebsite: 'Website',
+      viewOnMaps: 'Maps',
       previous: 'Previous',
       next: 'Next',
     },
