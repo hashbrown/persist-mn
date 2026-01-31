@@ -16,7 +16,11 @@ const businessCollection = defineCollection({
     address: z.string().optional(),
     phone: z.string().optional(),
     summary: z.string().optional(),
-    justification: z.string(),
+    // Allow `justification:` (YAML null) and treat it as "missing"
+    justification: z.preprocess(
+      (v) => (v === null ? undefined : v),
+      z.string().optional()
+    ),
     websiteUrl: z.string().url().optional(),
     websiteImageUrl: z.string().url().optional(),
     googleMapsUrl: z.string().url().optional(),

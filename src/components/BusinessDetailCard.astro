@@ -7,8 +7,9 @@ interface Props {
 }
 
 const { business } = Astro.props;
-const { displayName, category, address, city, state, phone, justification, websiteUrl, googleMapsUrl } = business.data;
+const { displayName, category, address, city, state, phone, justification, summary, websiteUrl, websiteImageUrl, googleMapsUrl } = business.data;
 const displayLocation = address || (city && state ? `${city}, ${state}` : undefined);
+const justificationText = justification || CONTENT.site.defaultJustification;
 
 // Determine primary CTA
 const primaryLink = websiteUrl || googleMapsUrl || '';
@@ -23,6 +24,18 @@ const phoneLink = phone?.replace(/\D/g, '');
   Copied from BusinessCard for now so the detail layout can evolve independently.
 -->
 <article class="bg-white rounded-lg shadow-md overflow-hidden">
+  {websiteImageUrl && (
+    <div class="w-full aspect-[16/9] bg-gray-100">
+      <img
+        src={websiteImageUrl}
+        alt={`Photo of ${displayName}`}
+        loading="lazy"
+        decoding="async"
+        class="w-full h-full object-cover"
+      />
+    </div>
+  )}
+
   <div class="p-4">
     <div class="flex items-start justify-between gap-4">
       <!-- Left side: Name, Location, Phone, justification -->
@@ -62,14 +75,21 @@ const phoneLink = phone?.replace(/\D/g, '');
           </p>
         )}
 
+        <!-- business summary -->
+        {summary && (
+          <p class="text-gray-700 text-sm mt-2">
+            {summary}
+          </p>
+        )}
+
         <!-- justification -->
-        <p class="text-gray-700 text-sm mt-3">
-          {justification}
+        <p class="text-gray-800 text-sm mt-4 font-semibold">
+          {justificationText}
         </p>
       </div>
 
       <!-- Right side: Category badge and CTA button -->
-      <div class="flex flex-col items-end gap-2 flex-shrink-0">
+      <div class="flex flex-col items-end gap-4 flex-shrink-0">
         <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 whitespace-nowrap">
           {category}
         </span>

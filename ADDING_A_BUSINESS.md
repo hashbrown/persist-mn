@@ -56,7 +56,7 @@ websiteImageUrl: "https://.../photo.jpg"
 - `category`
 - `justification`
 
-### Links (required rule)
+### Links
 
 At least one of these must be present:
 
@@ -71,7 +71,7 @@ At least one of these must be present:
 - `postalCode`
 - `phone`
 - `location` (lat/long object)
-- `websiteImageUrl` (separate from `image`; typically used when sourced from Places)
+- `websiteImageUrl`
 - `placesId`, `placesName`, `primaryType`, `types` (Places metadata)
 
 ## Writing good justifications (important)

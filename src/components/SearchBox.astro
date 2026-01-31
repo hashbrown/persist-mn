@@ -5,12 +5,21 @@ interface Props {
 }
 
 const { categorySlug, id = 'site-search' } = Astro.props;
+// Cache-buster for the search index: changes per deploy, stable within a deploy.
+// Cloudflare Pages: CF_PAGES_COMMIT_SHA. GitHub Actions: GITHUB_SHA.
+const env = (globalThis as any).process?.env ?? {};
+const searchIndexVersion =
+  env.CF_PAGES_COMMIT_SHA
+  || env.GITHUB_SHA
+  || env.VERCEL_GIT_COMMIT_SHA
+  || 'dev';
 ---
 
 <div
   class="relative w-full"
   data-search-root
   data-search-category={categorySlug ?? ''}
+  data-search-index-version={searchIndexVersion}
 >
   <label class="sr-only" for={`${id}-input`}>Search businesses</label>
   <input
@@ -62,10 +71,15 @@ const { categorySlug, id = 'site-search' } = Astro.props;
     indexPromise: Promise<SearchRecord[]> | null
     records: SearchRecord[] | null
     fuseByCategory: Map<string, Fuse<SearchRecord>>
+    searchIndexVersion: string
   }
 
   type FuseResult = { item: SearchRecord }
   type ResultLinkEl = HTMLAnchorElement & { dataset: { resultIndex?: string } }
+
+  const SEARCH_INDEX_VERSION =
+    document.querySelector('[data-search-root]')?.getAttribute('data-search-index-version')
+    ?? 'dev'
 
   function debounce<T extends (...args: any[]) => void>(
     fn: T,
@@ -86,9 +100,21 @@ const { categorySlug, id = 'site-search' } = Astro.props;
         indexPromise: null,
         records: null,
         fuseByCategory: new Map<string, Fuse<SearchRecord>>(),
+        searchIndexVersion: SEARCH_INDEX_VERSION,
       } satisfies SearchCache
     }
-    return w[key] as SearchCache
+
+    const cache = w[key] as SearchCache
+    // If a deploy-version changes between navigations but the page stays loaded,
+    // reset so we fetch the new index.
+    if (cache.searchIndexVersion !== SEARCH_INDEX_VERSION) {
+      cache.indexPromise = null
+      cache.records = null
+      cache.fuseByCategory = new Map<string, Fuse<SearchRecord>>()
+      cache.searchIndexVersion = SEARCH_INDEX_VERSION
+    }
+
+    return cache
   }
 
   async function loadRecords(): Promise<SearchRecord[]> {
@@ -96,7 +122,9 @@ const { categorySlug, id = 'site-search' } = Astro.props;
     if (cache.records) return cache.records
 
     if (!cache.indexPromise) {
-      cache.indexPromise = fetch('/search-index.json', { credentials: 'same-origin' }).then(
+      // Versioned URL so users fetch fresh after a deploy, then can cache within that deploy.
+      const url = `/search-index.json?v=${encodeURIComponent(SEARCH_INDEX_VERSION)}`
+      cache.indexPromise = fetch(url, { credentials: 'same-origin' }).then(
         async (res) => {
           if (!res.ok) throw new Error(`Failed to load search index: ${res.status}`)
           return (await res.json()) as SearchRecord[]

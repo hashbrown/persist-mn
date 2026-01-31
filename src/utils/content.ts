@@ -9,6 +9,7 @@ export const CONTENT = {
     motto: 'Persist. Prevail.',
     tagline: 'Supporting Minnesota businesses that support humankind.',
     defaultDescription: 'Supporting Minnesota businesses that support humankind',
+    defaultJustification: 'Closed in support of the ICE Out strike in MN.',
   },
 
   pages: {
